@@ -20,32 +20,40 @@ function Offresection(){
                     </p>
                 </div>
 
-               <div class="flex">
-  <div>
-    <div class="h-80 w-160 rounded-4xl bg-[url(https://framerusercontent.com/images/PDrjHbZPzqvaYnSBHOi3BevkHEA.png?width=2192&height=1152)] bg-cover bg-center bg-no-repeat pl-10">
-      <div class="flex flex-col gap-50 pl-20 text-left">
-        <div class=" ">
-          <h4 class="">Riz sauce tomate avce poulet</h4>
-          <p>Servi avec poulet grillé et légumes</p>
-        </div>
-        <div class=" ">
-          <button class="bg-red-800">1500 FCFA</button>
-        </div>
-      </div>
-    </div>
+                <div class="flex">
+                    <div >
+           
+                            <div className="h-80 w-160 rounded-4xl bg-[url('https://framerusercontent.com/images/PDrjHbZPzqvaYnSBHOi3BevkHEA.png?width=2192&height=1152')] bg-cover bg-center bg-no-repeat relative overflow-hidden"> 
+                                  <div className="flex flex-col gap-6 justify-center h-full  w-3/4">
 
-    <div>
-      <h4>Pâte sauce arachide</h4>
-      <p>Un classique riche et nourrissant</p>
-    </div>
-  </div>
-  <div>
-    <h4>Akassa + sauce gombo</h4>
-    <p>Un gout authentique et traditionnel</p>
-    <Buttonvar text="1000 FCFA" />
-  </div>
-</div>
+                                        <div>
+                                            <h4 className="text-white text-4xl font-black uppercase leading-tight text-left">Riz sauce tomate avec poulet</h4>
+                                            <p className="text-white text-lg font-medium opacity-90 mt-2 text-left">Servi avec poulet grillé et légumes</p>
+                                        </div>
+                                    
+                                        <div class="">
+                                            <button className="flex items-center justify-center bg-white rounded-full w-32 h-12 transition duration-150 hover:bg-[#fc9e25] ">
+                                                1500 FCFA <span className="text-xl">🔥</span>
+                                            </button>
+                                        </div>
+                                        
+                                  </div>
+                            </div>
 
+
+                            <div >
+                                <h4>Pâte sauce arachide</h4>
+                                <p>Un classique riche et nourrissant</p>
+                             
+                            </div>
+                      </div>
+                        <div >
+                            <h4>Akassa + sauce gombo</h4>
+                            <p>Un gout authentique et traditionnel</p>
+                            <Buttonvar text="1000 FCFA"/>
+                        </div>
+                  
+                </div>
 
              </section>
          </>
