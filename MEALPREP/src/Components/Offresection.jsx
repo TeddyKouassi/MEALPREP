@@ -1,5 +1,7 @@
 
 import './Offresection.css';
+import Buttonvar from './Button-var';
+
 function Offresection(){
     return(
          <>
@@ -18,27 +20,32 @@ function Offresection(){
                     </p>
                 </div>
 
-                <div class="flex">
-                    <div >
-                            <div class="rounded-xl bg-amber-700"  >
-                                <h4>Riz sauce tomate avce poulet</h4>
-                                <p>Servi avec poulet grillé et légumes</p>
-                                <span>1500 FCFA</span>
-                            </div>
+               <div class="flex">
+  <div>
+    <div class="h-80 w-160 rounded-4xl bg-[url(https://framerusercontent.com/images/PDrjHbZPzqvaYnSBHOi3BevkHEA.png?width=2192&height=1152)] bg-cover bg-center bg-no-repeat pl-10">
+      <div class="flex flex-col gap-50 pl-20 text-left">
+        <div class=" ">
+          <h4 class="">Riz sauce tomate avce poulet</h4>
+          <p>Servi avec poulet grillé et légumes</p>
+        </div>
+        <div class=" ">
+          <button class="bg-red-800">1500 FCFA</button>
+        </div>
+      </div>
+    </div>
 
-                            <div >
-                                <h4>Pâte sauce arachide</h4>
-                                <p>Un classique riche et nourrissant</p>
-                                <span>1200 FCFA</span>
-                            </div>
-                      </div>
-                        <div >
-                            <h4>Akassa + sauce gombo</h4>
-                            <p>Un gout authentique et traditionnel</p>
-                            <span>1000 FCFA</span>
-                        </div>
-                  
-                </div>
+    <div>
+      <h4>Pâte sauce arachide</h4>
+      <p>Un classique riche et nourrissant</p>
+    </div>
+  </div>
+  <div>
+    <h4>Akassa + sauce gombo</h4>
+    <p>Un gout authentique et traditionnel</p>
+    <Buttonvar text="1000 FCFA" />
+  </div>
+</div>
+
 
              </section>
          </>
