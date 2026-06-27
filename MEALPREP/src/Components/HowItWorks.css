@@ -1,0 +1,45 @@
+  .debut{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    border-radius: 20px;
+    background: linear-gradient(
+        120deg,
+        #2563eb 0%
+        #7c3aed 50%
+        #0f172a 100%
+    );
+    
+    padding: 30px;
+  }
+
+  .copy,.right{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+  }
+
+  .visual,.right-card{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+    justify-content: center;
+
+  }
+
+  .how{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  .gauche{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .right{
+    
+  }

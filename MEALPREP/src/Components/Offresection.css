@@ -1,0 +1,48 @@
+
+.offers{
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.offre-header{
+    max-width: 700px;
+    margin: 0 auto;
+
+}
+
+.offre-1{
+    color: #e63946;
+    font-size: 14px;
+    font-weight: 600px;
+}
+
+.offre-title{
+    font-size: 42px;
+    font-weight: 800;
+    margin: 20px 0;
+    color: #222;
+}
+
+.ofre-description{
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6;
+}
+
+.offre-cards{
+    display: flex;
+    gap: 20px;
+    margin-top: 50px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.offre-2{
+    width: 250px;
+    height: 150px;
+    background-color: #f5F5F5;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
