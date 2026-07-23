@@ -1,0 +1,43 @@
+
+.menu-header{
+    font-size: 42px;
+    font-weight: 800;
+    margin: 20px 0;
+    color: #222;
+
+}
+
+.card-menu {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  
+  border-radius: 20px;
+  overflow: hidden;
+  transition: 0,2s;
+} 
+
+
+
+.card-menu.img:hover{
+    transform: scale(1,1) rotate(20deg);
+}
+
+
+.container-menu {
+  padding: 2px 16px;
+}
+
+.card-container{
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    
+    
+}
+
+.hover img:hover{
+  transition: 0.5s;
+  transform: scale(1.1) rotate(5deg);
+  cursor: pointer;
+  
+}

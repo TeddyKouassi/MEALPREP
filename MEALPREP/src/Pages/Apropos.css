@@ -1,0 +1,74 @@
+.apropos{
+    width: 100%;
+    overflow: hidden;
+}
+
+/* pour la section about-hero*/
+.apropos-hero{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 60vh;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.apropos-hero-content{
+    max-width: 800px;
+}
+
+.apropos-hero-content h1{
+    font-size: 45px;
+    
+}
+
+.apropos-hero-content p{
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+/* pour la section about-story*/
+.apropos-mission{
+    padding: 70px 20px;
+}
+
+.apropos-mission-content{
+    max-width: 900px;
+    text-align: center;
+    
+}
+
+.apropos-story h2,
+.apropos-mission h2,
+.apropos-values h2 {
+  font-size: 32px;
+  color: #1b4332;
+  margin-bottom: 20px;
+}
+
+/* pour la section about-mission*/
+.apropos-story{
+    padding: 70px 20px;
+}
+
+.apropos-story-content{
+    max-width: 900px;
+    margin: auto;
+    text-align: center;
+}
+
+.apropos-story p{
+    margin-bottom: 15px;
+    line-height: 1.8;
+}
+
+.apropos-mission{
+    padding: 70px 20px;
+}
+
+
+
+
+
+
+

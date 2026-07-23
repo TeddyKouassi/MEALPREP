@@ -1,0 +1,19 @@
+
+.about-video{
+    width: 100%;
+    max-width: 1400px;
+    margin-top: 30px;
+    border-radius: 20px;
+    overflow: hidden;
+    height: 100vh;
+    margin: 0;
+    
+}
+
+.about-video video{
+    width: 100%;
+    display: flex;
+    height: auto;
+    
+    
+}

@@ -25,6 +25,33 @@ function Dishes(){
             </section>
         
             <section className='dishes-1'>
+                <div className='dishes-track'>
+
+                
+                <div className="card">
+                    <img src={amiwoImg} alt="Avatar" style={{width: "100%"}} />
+                    <div className="container">
+                        <h4><b>Amiwo</b></h4> 
+                        <p>400 FCFA; 450 kcal</p>
+                    </div>
+                </div>
+
+                <div className="card">
+                    <img src={amiwoImg} alt="Avatar" style={{width: "100%"}} />
+                    <div className="container">
+                        <h4><b>Amiwo</b></h4> 
+                        <p>400 FCFA; 450 kcal</p>
+                    </div>
+                </div>
+
+                <div className="card">
+                    <img src={amiwoImg} alt="Avatar" style={{width: "100%"}} />
+                    <div className="container">
+                        <h4><b>Amiwo</b></h4> 
+                        <p>400 FCFA; 450 kcal</p>
+                    </div>
+                </div>
+
                 <div className="card">
                     <img src={amiwoImg} alt="Avatar" style={{width: "100%"}} />
                     <div className="container">
@@ -34,6 +61,30 @@ function Dishes(){
                 </div>
 
         
+                <div className="card">
+                    <img src={haricotImg} alt="Avatar" style={{width: "100%"}} />
+                    <div className="container">
+                        <h4><b>Haricot</b></h4> 
+                        <p>300 FCFA; 450 kcal</p>
+                    </div>
+                </div>
+
+                <div className="card">
+                    <img src={haricotImg} alt="Avatar" style={{width: "100%"}} />
+                    <div className="container">
+                        <h4><b>Haricot</b></h4> 
+                        <p>300 FCFA; 450 kcal</p>
+                    </div>
+                </div>
+
+                <div className="card">
+                    <img src={haricotImg} alt="Avatar" style={{width: "100%"}} />
+                    <div className="container">
+                        <h4><b>Haricot</b></h4> 
+                        <p>300 FCFA; 450 kcal</p>
+                    </div>
+                </div>
+
                 <div className="card">
                     <img src={haricotImg} alt="Avatar" style={{width: "100%"}} />
                     <div className="container">
@@ -52,6 +103,30 @@ function Dishes(){
                 </div>
 
                 
+                <div className="card">
+                    <img src={akassaImg} alt="Avatar" style={{width: "100%"}} />
+                    <div className="container">
+                        <h4><b>Akassa + sauce gombo</b></h4> 
+                        <p>500 FCFA; 550 kcal</p>
+                    </div>
+                </div>
+
+                <div className="card">
+                    <img src={akassaImg} alt="Avatar" style={{width: "100%"}} />
+                    <div className="container">
+                        <h4><b>Akassa + sauce gombo</b></h4> 
+                        <p>500 FCFA; 550 kcal</p>
+                    </div>
+                </div>
+
+                <div className="card">
+                    <img src={akassaImg} alt="Avatar" style={{width: "100%"}} />
+                    <div className="container">
+                        <h4><b>Akassa + sauce gombo</b></h4> 
+                        <p>500 FCFA; 550 kcal</p>
+                    </div>
+                </div>
+
                 <div className="card">
                     <img src={akassaImg} alt="Avatar" style={{width: "100%"}} />
                     <div className="container">
@@ -96,6 +171,54 @@ function Dishes(){
                         <p>700 FCFA; 800 kcal</p>
                     </div>
                 </div>
+
+                <div className="card">
+                    <img src={ignameImg} alt="Avatar" style={{width: "100%"}} />
+                    <div className="container">
+                        <h4><b>Igname pilée</b></h4> 
+                        <p>700 FCFA; 800 kcal</p>
+                    </div>
+                </div>
+
+                <div className="card">
+                    <img src={ignameImg} alt="Avatar" style={{width: "100%"}} />
+                    <div className="container">
+                        <h4><b>Igname pilée</b></h4> 
+                        <p>700 FCFA; 800 kcal</p>
+                    </div>
+                </div>
+
+                <div className="card">
+                    <img src={ignameImg} alt="Avatar" style={{width: "100%"}} />
+                    <div className="container">
+                        <h4><b>Igname pilée</b></h4> 
+                        <p>700 FCFA; 800 kcal</p>
+                    </div>
+                </div>
+
+                <div className="card">
+                    <img src={ignameImg} alt="Avatar" style={{width: "100%"}} />
+                    <div className="container">
+                        <h4><b>Igname pilée</b></h4> 
+                        <p>700 FCFA; 800 kcal</p>
+                    </div>
+                </div>
+
+                <div className="card">
+                    <img src={ignameImg} alt="Avatar" style={{width: "100%"}} />
+                    <div className="container">
+                        <h4><b>Igname pilée</b></h4> 
+                        <p>700 FCFA; 800 kcal</p>
+                    </div>
+                </div>
+
+                <div className="card">
+                    <img src={ignameImg} alt="Avatar" style={{width: "100%"}} />
+                    <div className="container">
+                        <h4><b>Igname pilée</b></h4> 
+                        <p>700 FCFA; 800 kcal</p>
+                    </div>
+                </div>
                 <div className="card">
                     <img src={ignameImg} alt="Avatar" style={{width: "100%"}} />
                     <div className="container">
@@ -134,6 +257,9 @@ function Dishes(){
                         <h4><b>Igname pilée</b></h4> 
                         <p>700 FCFA; 800 kcal</p>
                     </div>
+                </div>
+
+
                 </div>
 
 

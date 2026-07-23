@@ -1,0 +1,32 @@
+.inscription{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+.inscription-image{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    max-width: 50%;
+}
+
+.inscription-image img{
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+    max-height: 600px;
+
+}
+
+.form-input{
+    display: grid;
+    gap: 15px;
+    margin-top: 20px;
+    
+}
+
