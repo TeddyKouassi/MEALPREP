@@ -1,3 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+
+
+
+body{
+background-color: #f9f7f2;
+}
+
 .apropos{
     width: 100%;
     overflow: hidden;
@@ -5,27 +23,34 @@
 
 /* pour la section about-hero*/
 .apropos-hero{
+    width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    min-height: 60vh;
-    text-align: center;
-    padding: 40px 20px;
+    max-width: 1200px;
 }
 
 .apropos-hero-content{
-    max-width: 800px;
+    width: 55%;
 }
 
-.apropos-hero-content h1{
-    font-size: 45px;
-    
+.apropos-hero-image{
+    width: 38%;
 }
 
-.apropos-hero-content p{
-    font-size: 15px;
-    line-height: 1.6;
+.apropos-hero-image img{
+    width: 100%;
+    height: auto;
+    border-radius: 25px;
+    box-shadow: 0 10px 30px  rgb(0,0,0.08);
+    transition: O.5s ease;
+    cursor: pointer;
 }
+
+.apropos-hero-image img:hover{
+    transform: translateY(-15px);
+}
+
 
 /* pour la section about-story*/
 .apropos-mission{
@@ -44,6 +69,7 @@
   font-size: 32px;
   color: #1b4332;
   margin-bottom: 20px;
+  transition: 0.5s;
 }
 
 /* pour la section about-mission*/
@@ -60,11 +86,103 @@
 .apropos-story p{
     margin-bottom: 15px;
     line-height: 1.8;
+    font-size: 18px;
+    
 }
 
 .apropos-mission{
     padding: 70px 20px;
+    
+
 }
+
+.apropos-mission-content{
+    max-width: 1100px;
+    margin:auto;
+    text-align: center;
+}
+
+.apropos-mission-cards{
+    display: flex;
+    gap: 45px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+
+.apropos-mission-card{
+    width: 280px;
+    padding: 25px;
+    border-radius: 25px;
+    background: white;
+    box-shadow: 0 5px 10px rgb(from rgb(123, 122, 122) r g b);
+}
+
+/* concernant les valeurs, nous avons*/
+
+.apropos-values{
+    padding: 70px 20px;
+}
+
+.apropos-values-content{
+    max-width: 1100px;
+    margin: auto;
+    text-align: center;
+}
+
+.apropos-values-cards{
+    display: flex;
+    gap: 25px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.apropos-values-card{
+    width: 250px;
+    border-radius: 15px;
+    padding: 25px;
+    background-color: var(--token-f5cebdf7-3c22-4a65-b9b7-36529fcfdc15, rgb(255, 234, 190));
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+.apropos-values-card :hover{
+    font-weight: bold;
+}
+
+/*pour mon bOUtton cta*/
+.apropos-cta{
+    padding: 70px 20px;
+    text-align: center;
+    background-color: #1b4332;
+    color: white;
+}
+
+.apropos-cta-content {
+  max-width: 800px;
+  margin: auto;
+}
+
+.apropos-cta h2 {
+  font-size: 35px;
+  margin-bottom: 20px;
+}
+
+.apropos-cta p {
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.apropos-cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+
+
+
+
 
 
 

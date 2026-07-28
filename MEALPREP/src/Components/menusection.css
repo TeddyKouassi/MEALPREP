@@ -1,0 +1,9 @@
+.menu-section{
+    display: flex;
+    
+}
+
+.conatainer-image{
+    justify-content: space-between;
+
+}

@@ -18,10 +18,9 @@ function Connexionmealprep(){
         setLoading(true); 
 
         try { 
-            const response = await login({ email, password }); 
+            const response = await login(email, password); 
             
-            if (response && response.token) {
-                localStorage.setItem('token', response.token); 
+            if (response) {
                 navigate('/Dashboard'); 
             } else {
                 setError('Erreur de connexion : Aucun jeton reçu.');
