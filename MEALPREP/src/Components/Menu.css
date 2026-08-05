@@ -1,43 +1,72 @@
+/* ==========================================================================
+   1. STYLE MOBILE (Par défaut)
+   ========================================================================== */
 
 .menu-header{
-    font-size: 42px;
+    font-size: clamp(2rem, 5vw, 2.6rem); /* Taille fluide pour s'adapter aux petits écrans */
     font-weight: 800;
     margin: 20px 0;
     color: #222;
-
+    text-align: center; /* Centré sur mobile */
 }
 
 .card-menu {
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  transition: 0.3s;
-  
   border-radius: 20px;
   overflow: hidden;
-  transition: 0,2s;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transition unique corrigée */
+  width: 100%;
 } 
 
-
-
-.card-menu.img:hover{
-    transform: scale(1,1) rotate(20deg);
+.card-menu img {
+    display: block;
+    width: 100%;
+    height: 250px; /* Hauteur fixe pour uniformiser toutes vos images de plats */
+    object-fit: cover; /* Coupe l'image sans la déformer */
+    transition: transform 0.5s ease;
 }
 
-
 .container-menu {
-  padding: 2px 16px;
+  padding: 15px 20px; /* Un peu plus d'espace interne pour le confort tactile */
 }
 
 .card-container{
-    display: flex;
+    display: grid;
+    /* CSS Grid automatique : gère les colonnes sur mobile, tablette et PC sans media queries */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 25px;
     justify-content: center;
-    
-    
+    padding: 20px 5%; /* Marges de sécurité sur les côtés */
+}
+
+/* Éléments de survol et d'animation corrigés */
+.card-menu:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.3);
+    transform: translateY(-5px);
+}
+
+.card-menu:hover img {
+    transform: scale(1.08) rotate(2deg);
+    cursor: pointer;
 }
 
 .hover img:hover{
   transition: 0.5s;
   transform: scale(1.1) rotate(5deg);
   cursor: pointer;
-  
+}
+
+/* ==========================================================================
+   2. ADAPTATION ORDINATEUR (Écrans supérieurs à 1024px)
+   ========================================================================== */
+@media screen and (min-width: 1024px) {
+    .menu-header {
+        text-align: left; /* Aligné à gauche sur PC */
+        padding-left: 8%;
+    }
+
+    .card-container {
+        padding: 40px 8%; /* Plus d'espace sur les côtés sur grand écran */
+        gap: 30px;
+    }
 }

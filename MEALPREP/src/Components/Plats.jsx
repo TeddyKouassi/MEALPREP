@@ -1,7 +1,9 @@
+import {Link} from 'react-router-dom';
 function Plats({ image, nom, prix, description}){
     return ( 
         <>
-        <div className="plat-card">
+        <Link to="/Inscription" className="plat-card">
+        
             <div className="plat-image-container">
                 <img src={image} alt="" className="plat-image" />
             </div>
@@ -15,7 +17,8 @@ function Plats({ image, nom, prix, description}){
             <p className="plat-description">{description}</p>
         </div>
         
-         </div>
+         
+         </Link>
         
         </>
     )

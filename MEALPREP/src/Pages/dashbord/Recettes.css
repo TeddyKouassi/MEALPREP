@@ -1,0 +1,77 @@
+/* ==========================================================================
+   1. STYLE MOBILE (Par défaut : Confort d'écriture maximal)
+   ========================================================================== */
+
+.form-recette {
+    width: 100%; /* Prend toute la largeur disponible sur mobile */
+    padding: 0 5%; /* Marges internes de sécurité pour ne pas coller aux bords de l'écran */
+    margin: 20px auto;
+    margin-bottom: 60px; /* Espace réduit sous le formulaire sur mobile */
+}
+
+.form-recette h2 {
+    font-size: clamp(1.4rem, 5vw, 1.8rem); /* Titre fluide adapté à l'écran */
+    margin-bottom: 20px;
+    color: #222;
+}
+
+.form-recette form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Correction orthographe : .form-recette select */
+.form-recette input,
+.form-recette select,
+.form-recette textarea {
+    padding: 12px 10px; /* Légèrement plus haut pour faciliter la saisie tactile */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px; /* Évite le zoom automatique forcé du navigateur sur iOS */
+    width: 100%;
+    background-color: #fff;
+    font-family: sans-serif;
+}
+
+.form-recette textarea {
+    min-height: 100px;
+    resize: vertical; /* Permet à l'utilisateur d'agrandir le champ verticalement */
+}
+
+.form-recette button {
+    padding: 12px;
+    border: none;
+    background: green;
+    color: white;
+    border-radius: 5px;
+    width: 100%; /* Le bouton prend toute la largeur sur mobile pour être cliquable facilement */
+    max-width: 280px; /* Empêche le bouton d'être démesurément grand */
+    cursor: pointer;
+    transition: all 0.3s ease;
+    align-self: center; /* Reste centré au milieu du formulaire */
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.form-recette button:hover {
+    font-weight: bold;
+    background: darkgoldenrod;
+    color: black;
+}
+
+/* ==========================================================================
+   2. ADAPTATION ORDINATEUR (Écrans supérieurs à 1024px)
+   ========================================================================== */
+@media screen and (min-width: 1024px) {
+    .form-recette {
+        width: 70%; /* On remet votre largeur d'origine sur grand écran */
+        max-width: 800px; /* Sécurité pour éviter qu'il ne s'étale trop sur un écran géant */
+        padding: 0;
+        margin-bottom: 120px; /* On remet votre marge basse d'origine */
+    }
+
+    .form-recette button {
+        width: 50%; /* Le bouton reprend sa largeur de 50% sur PC */
+    }
+}

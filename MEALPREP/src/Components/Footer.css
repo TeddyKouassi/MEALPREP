@@ -1,72 +1,137 @@
+/* ==========================================================================
+   1. STYLE MOBILE (Par défaut : blocs empilés verticalement)
+   ========================================================================== */
 
 .footer {
-  position: relative;
-  color: white;
-  padding-top: 80px;
-  background: linear-gradient(135deg, #b91c1c, #7f1d1d);
+    position: relative;
+    color: white;
+    padding-top: 60px; /* Réduit sur mobile pour s'adapter à la taille de la vague */
+    background: linear-gradient(135deg, #b91c1c, #7f1d1d);
+    width: 100%;
 }
 
-
+/* L'effet de vague du haut */
 .footer-vague {
-  position: absolute;
-  top: -50px;
-  width: 100%;
-  height: 100px;
-  background: white;
-  border-bottom-left-radius: 50% 50px;
-  border-bottom-right-radius: 50% 50px;
+    position: absolute;
+    top: -30px; /* Ajusté pour éviter un trou blanc sur mobile */
+    width: 100%;
+    height: 60px; /* Plus petite sur mobile pour ne pas cacher le contenu */
+    background: white;
+    border-bottom-left-radius: 50% 30px;
+    border-bottom-right-radius: 50% 30px;
 }
 
-
+/* Conteneur principal */
 .footer-container {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  padding: 40px 20px;
-  gap: 40px;
+    display: flex;
+    flex-direction: column; /* Empile les sections (Gauche, Liens, etc.) sur mobile */
+    padding: 30px 20px;
+    gap: 30px; /* Espace uniforme entre les blocs */
 }
 
+.footer-gauche {
+    text-align: center; /* Centré sur mobile pour un meilleur visuel */
+}
 
 .footer-gauche h2 {
-  margin-bottom: 15px;
+    margin-bottom: 15px;
+    font-size: 24px;
 }
 
 .footer-gauche h4 {
-  margin-top: 10px;
+    margin-top: 10px;
+    font-weight: 500;
 }
 
-
+/* Bloc contenant les groupes de liens */
 .footer-links {
-  display: flex;
-  gap: 40px;
-  flex-wrap: wrap;
+    display: flex;
+    flex-direction: column; /* Empile les colonnes de liens sur mobile */
+    gap: 25px;
+    text-align: center;
 }
 
 .footer-links h4 {
-  margin-bottom: 10px;
+    margin-bottom: 10px;
+    color: #fff;
+    font-size: 16px;
 }
 
 .footer-links p {
-  margin: 5px 0;
-  color: #f3f4f6;
-  cursor: pointer;
+    margin: 8px 0; /* Légèrement plus grand pour faciliter le clic tactile */
+    color: #f3f4f6;
+    cursor: pointer;
+    font-size: 15px;
+    transition: color 0.2s ease;
 }
 
 .footer-links p:hover {
-  color: white;
+    color: white;
 }
 
-
+/* Ligne de copyright tout en bas */
 .footer-bottom {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-top: 1px solid rgba(255,255,255,0.2);
-  padding: 15px 20px;
-  font-size: 14px;
+    display: flex;
+    flex-direction: column; /* Empile le texte et les réseaux sociaux sur mobile */
+    gap: 15px;
+    text-align: center;
+    align-items: center;
+    border-top: 1px solid rgba(255,255,255,0.2);
+    padding: 20px;
+    font-size: 13px;
+}
+
+.socials {
+    display: flex;
+    gap: 15px; /* Espace régulier entre les icônes de réseaux */
 }
 
 .socials span {
-  margin-left: 10px;
-  cursor: pointer;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+}
+
+.socials span:hover {
+    opacity: 0.8;
+}
+
+/* ==========================================================================
+   2. ADAPTATION ORDINATEUR (Écrans supérieurs à 1024px)
+   ========================================================================== */
+@media screen and (min-width: 1024px) {
+    .footer {
+        padding-top: 80px; /* On remet vos valeurs d'origine */
+    }
+
+    .footer-vague {
+        top: -50px;
+        height: 100px;
+        border-bottom-left-radius: 50% 50px;
+        border-bottom-right-radius: 50% 50px;
+    }
+
+    .footer-container {
+        flex-direction: row; /* Aligne le bloc gauche et les liens côte à côte */
+        justify-content: space-between;
+        padding: 40px 8%; /* Plus d'espace sur les côtés */
+        gap: 40px;
+    }
+
+    .footer-gauche {
+        text-align: left; /* Aligné à gauche sur PC */
+        max-width: 300px; /* Évite que le texte de gauche s'étale trop */
+    }
+
+    .footer-links {
+        flex-direction: row; /* Les colonnes de liens se remettent côte à côte */
+        gap: 60px; /* Plus d'espace entre les colonnes de liens */
+        text-align: left;
+    }
+
+    .footer-bottom {
+        flex-direction: row; /* Le copyright à gauche, les réseaux à droite */
+        justify-content: space-between;
+        padding: 15px 8%;
+        font-size: 14px;
+    }
 }

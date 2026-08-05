@@ -21,7 +21,7 @@ function Acceuil() {
     <Hero/>
     <Dishes/>
     <Offresection/>
-    <Menu/>
+    <Menu/>   
     <About/>
     <Video/>
     <Choose/>

@@ -1,84 +1,147 @@
-/*pour nos buttons, on a:*/
-.categories-buttons{
+/* ==========================================================================
+   1. STYLE MOBILE (Par défaut)
+   ========================================================================== */
+
+/* LES BOUTONS DE CATÉGORIES */
+.categories-buttons {
     display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin: 30px 0;
+    justify-content: flex-start; /* Aligné à gauche pour permettre le scroll sur mobile */
+    gap: 12px; /* Espace légèrement réduit sur mobile */
+    margin: 20px 0;
+    padding: 10px 5%; /* Marge de sécurité pour le défilement */
+    
+    /* MAGIE RESPONSIVE : Permet de faire défiler les boutons au doigt sur mobile 
+       si la liste est trop longue pour l'écran */
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none; /* Cache la barre sur Firefox */
 }
 
-.btn-categorie{
-    padding: 10px 25px;
+/* Cache la barre de défilement sur Chrome/Safari */
+.categories-buttons::-webkit-scrollbar {
+    display: none;
+}
+
+.btn-categorie {
+    padding: 10px 20px; /* Un peu plus compact pour le mobile */
     border: 1px solid #e2b49a;
     border-radius: 25px;
     background: transparent;
     font-weight: 600;
     cursor: pointer;
+    font-size: 14px;
+    flex-shrink: 0; /* Empêche les boutons de s'écraser/réduire en largeur */
+    transition: all 0.3s ease;
 }
 
-.btn-categorie.active{
+.btn-categorie.active {
     border-color: #63050c;
-    transition: 0.5s;
-}
-
-.btn-categorie.active:hover{ 
-background: darkgoldenrod;
+    background-color: #63050c; /* Optionnel : fond coloré pour mieux voir le bouton actif */
     color: white;
 }
 
-/* concernat la div DES PLATS */
-.plats-grid{
-    display: grid;
-    gap: 30px;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+.btn-categorie:hover,
+.btn-categorie.active:hover { 
+    background: darkgoldenrod;
+    color: white;
+    border-color: darkgoldenrod;
 }
 
-/* pour les cartes: */
-.plat-card{
+/* LA GRILLE DES PLATS */
+.plats-grid {
+    display: grid;
+    gap: 25px; /* Espace entre les cartes */
+    /* Crée automatiquement le bon nombre de colonnes d'au moins 280px */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+    padding: 20px 5%; /* Aligné avec vos autres sections */
+}
+
+/* LES CARTES DE PLATS */
+.plat-card {
     border-radius: 20px;
     overflow: hidden;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    background-color: #fff;
+    width: 100%;
+    transition: transform 0.3s ease;
 }
 
-.plat-image-container{
+/* Légère élévation de la carte au survol global */
+.plat-card:hover {
+    transform: translateY(-5px);
+}
+
+.plat-image-container {
     height: 180px;
     width: 100%;
-    overflow: hidden;
+    overflow: hidden; /* Coupe l'image qui dépasse pendant l'animation */
     cursor: pointer;
-    transition: 0.5s;
-
 }
 
-.plat-image-container:hover{
-  transform: rotate(5deg);
-}
-
-.plat-image{
+.plat-image {
     width: 100%;
     height: 100%;
     object-fit: cover;
-
+    transition: transform 0.5s ease; /* Transition appliquée sur l'image elle-même */
 }
 
-/* c'est ici j'ai fait apparaitre la couleurr de la description (titre et tout */
-.plat-info-bande{
+/* L'image tourne et zoome à l'intérieur du cadre au survol */
+.plat-card:hover .plat-image {
+    transform: scale(1.1) rotate(3deg);
+}
+
+/* BLOC D'INFORMATIONS DU PLAT */
+.plat-info-bande {
     background-color: darkgoldenrod;
     color: white;
     padding: 20px;
 }
 
-.plat-ligne-titre{
+.plat-ligne-titre {
     display: flex;
     justify-content: space-between;
+    align-items: center; /* Aligne verticalement le titre et le prix si présent */
     margin-bottom: 10px;
+    gap: 10px;
 }
 
-.plat-titre{
+.plat-titre {
     margin: 0;
     text-transform: uppercase;
+    font-size: clamp(1.1rem, 3vw, 1.3rem); /* Titre fluide */
+    font-weight: 700;
 }
 
-.plat-description{
+.plat-description {
     margin: 0;
-
+    font-size: 14px;
+    line-height: 1.4;
+    opacity: 0.95;
 }
 
+
+/* ==========================================================================
+   2. ADAPTATION ORDINATEUR (Écrans supérieurs à 1024px)
+   ========================================================================== */
+@media screen and (min-width: 1024px) {
+    .categories-buttons {
+        justify-content: center; /* On recentre les boutons sur grand écran */
+        padding: 0;
+        margin: 30px 0;
+        overflow: visible; /* Plus besoin de scroller */
+    }
+
+    .btn-categorie {
+        padding: 10px 25px; /* Reprend vos tailles d'origine */
+    }
+
+    .plats-grid {
+        gap: 30px; /* Plus d'espace entre les cartes sur PC */
+        padding: 40px 8%; /* Marges standards pour ordinateur */
+    }
+    
+    .plat-image-container {
+        height: 200px; /* Un peu plus grand sur grand écran pour l'esthétique */
+    }
+}

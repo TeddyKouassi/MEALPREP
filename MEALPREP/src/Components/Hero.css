@@ -1,70 +1,61 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    
-}
+/* ==========================================================================
+   1. STYLE MOBILE (Par défaut)
+   ========================================================================== */
 
-boy{
-    background-color: #fef1d8;
-}
-section{
-    padding: 70px 8%;
-}
+/* Note : Le reset global (*, body, section) doit idéalement être mis 
+   dans votre fichier index.css ou App.css global pour éviter les doublons. */
 
-.hero{
-    
+.hero {
+    display: flex; /* Indispensable pour aligner le contenu */
+    flex-direction: column;
     justify-content: center;
-    text-align: center;
     align-items: center;
+    text-align: center;
     background-color: #fef1d8;
+    min-height: 70vh; /* Donne de la hauteur pour aérer le contenu sur mobile */
+    width: 100%;
 }
 
-.hero-content{
-    
-    
-    
+.hero-content {
+    width: 100%; /* S'assure que le contenu prend bien toute la place disponible */
 }
 
-.hero-title{
-    font-size: 48px;
+.hero-title {
+    /* Utilise clamp() : 32px min sur mobile, grandit selon l'écran, 48px max sur PC */
+    font-size: clamp(2rem, 6vw, 3rem); 
     font-weight: 900;
     line-height: 1.2;
     margin-bottom: 20px;
     text-transform: uppercase;
-
 }
 
-.hero-content-1{
+.hero-content-1 {
     letter-spacing: 2px;
-    font-size: 14px;
-    margin-bottom:  20px;
+    font-size: 13px; /* Légèrement réduit pour mobile */
+    margin-bottom: 20px;
     opacity: 0.9;
-    
-
 }
 
-.hero-description{
-    font-size: 18px;
+.hero-description {
+    font-size: 16px; /* Taille lisible sur smartphone */
     margin-bottom: 30px;
     opacity: 0.9;
-
+    line-height: 1.5;
 }
 
-.hero h1{
-    font-size: 2.5rem;
+/* Optionnel : Si vous utilisez la balise h1 directement dans le composant */
+.hero h1 {
+    font-size: clamp(2rem, 6vw, 2.5rem);
     margin-bottom: 20px;
-    font-family: poppin;
-    
+    font-family: 'Poppins', sans-serif; /* Correction orthographe poppins */
 }
 
-.hero-benefits{
+.hero-benefits {
     padding: 0;
     margin-bottom: 25px;
-
 }
 
-.hero-btn{
+.hero-btn {
     background-color: white;
     cursor: pointer;
     transition: 0.3s;
@@ -74,17 +65,34 @@ section{
     color: black;
     padding: 12px 20px;
     
-    
-    
+    /* Optimisation Mobile : Un bouton large est plus facile à cliquer avec le pouce */
+    width: 100%; 
+    max-width: 280px; 
 }
 
-.hero-btn:hover{
+.hero-btn:hover {
     background-color: rgb(227, 192, 105);
     font-weight: bold;
     transform: scale(1.05);
-
 }
 
+/* ==========================================================================
+   2. ADAPTATION ORDINATEUR (Écrans supérieurs à 1024px)
+   ========================================================================== */
+@media screen and (min-width: 1024px) {
+    .hero {
+        min-height: 80vh; /* Un peu plus haut sur grand écran */
+    }
 
+    .hero-description {
+        font-size: 18px; /* On remet votre taille d'origine */
+        max-width: 650px; /* Évite que le texte s'étale sur toute la largeur de l'ordinateur */
+        margin-left: auto; /* Centre le bloc de texte horizontalement */
+        margin-right: auto;
+    }
 
-
+    .hero-btn {
+        width: auto; /* Le bouton reprend sa taille naturelle ajustée au texte sur PC */
+        padding: 12px 30px; /* Un peu plus large pour l'esthétique */
+    }
+}

@@ -1,3 +1,4 @@
+
 import {Routes, Route} from 'react-router-dom'
 import Navbar from './Components/Navbar';
 import Acceuil from './Pages/Acceuil';
@@ -7,6 +8,8 @@ import Connexionmealprep from './Pages/Connexion';
 import Inscription from './Pages/Inscription';
 import DashbordClient from './Pages/dashbord/DashbordClient';
 import DashbordAdmin from './Pages/dashbord/DashbordAdmin';
+import Recettes from './Pages/dashbord/Recettes';
+import NosRecettes from './Pages/NosRecettes';
 import Footer from "../src/Components/Footer";
 
 function App (){
@@ -23,8 +26,9 @@ function App (){
             <Route path="/Connexion" element={<Connexionmealprep />} />
             <Route path="/Inscription" element={<Inscription />} />
             <Route path="/dashbord/admin" element={<DashbordAdmin />} />
+            <Route path="/recettes" element={<Recettes />} />
             <Route path="/dashbord/client" element={<DashbordClient />} />
-            
+            <Route path="/nos-recettes" element={<NosRecettes />} />
             
         
           </Routes>

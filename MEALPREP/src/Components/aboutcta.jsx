@@ -1,5 +1,5 @@
 import Button from "./Button";
-
+import {Link} from "react-router-dom";
 function aboutcta() {
   return (
     <> 
@@ -14,8 +14,14 @@ function aboutcta() {
         </p>
 
         <div className="apropos-cta-buttons">
+          <Link to="/Inscription" >
           <Button text="Commencer maintenant" />
+          </Link>
+           
+           <Link to="/Recettes">
           <Button text="Découvrir les recettes" />
+          </Link>
+          
         </div>
       </div>
     </section>

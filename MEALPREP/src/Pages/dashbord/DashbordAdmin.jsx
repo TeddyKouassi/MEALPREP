@@ -1,5 +1,5 @@
 
-
+import "./Dashbord.css"
 function DashbordAdmin(){
     return(
         <>

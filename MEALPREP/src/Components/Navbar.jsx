@@ -15,7 +15,7 @@ function Navbar(){
                 <li><Link to="/">Acceuil</Link></li>
                 <li><Link to="/a-propos">A propos</Link></li>
                 <li><Link to="/menu">Menu</Link></li>
-                <li><Link to="/"></Link></li>
+                <li><Link to="/nos-recettes">Nos Recettes</Link></li>
                 
             </ul>
             

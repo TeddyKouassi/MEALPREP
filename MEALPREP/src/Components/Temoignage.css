@@ -1,27 +1,66 @@
+/* ==========================================================================
+   1. LE PARENT : LA GRILLE DE TÉMOIGNAGES (À ajouter autour de vos cartes)
+   ========================================================================== */
+.grid-temoignage {
+    display: grid;
+    /* Aligne automatiquement les cartes (1 col sur mobile, 2 sur tablette, 3+ sur PC) */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    padding: 20px 5%;
+    width: 100%;
+}
 
-.card-temoignage{
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  transition: 0.3s;
-  border-radius: 20px;
-  overflow: hidden;
-  transition: 0,2s;
+/* ==========================================================================
+   2. STYLE MOBILE (Par défaut)
+   ========================================================================== */
+
+.card-temoignage {
+    background-color: #ffffff; /* Fond blanc pour faire ressortir le texte */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.1);
+    border-radius: 20px;
+    overflow: hidden;
+    width: 100%;
+    /* Transition fluide unique et corrigée */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+/* Effet discret et qualitatif au survol pour les ordinateurs */
+.card-temoignage:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.15);
 }
 
 .container-temoignage {
-  padding: 12px 0 0 0;     
-  text-align: center;      
+    /* Augmentation du padding pour aérer le texte (surtout sur petit écran) */
+    padding: 25px 20px;     
+    text-align: center;      
 }
 
 .container-temoignage h4 {
-  margin: 0;
-  font-size: 16px;
-  color: #333;
-  font-weight: 600;
+    margin: 0 0 10px 0; /* Ajout d'une marge basse pour séparer le nom du texte */
+    font-size: 16px;
+    color: #333;
+    font-weight: 600;
 }
 
 .container-temoignage p {
-  margin: 4px 0 0 0;
-  font-size: 14px;
-  color: #666;
-  
+    margin: 0;
+    font-size: 14px;
+    color: #666;
+    line-height: 1.5; /* Améliore grandement la lisibilité du témoignage */
+    font-style: italic; /* Style classique et élégant pour un témoignage */
+}
+
+/* ==========================================================================
+   3. ADAPTATION ORDINATEUR (Écrans supérieurs à 1024px)
+   ========================================================================== */
+@media screen and (min-width: 1024px) {
+    .grid-temoignage {
+        padding: 40px 8%; /* Plus d'espace sur les côtés sur grand écran */
+        gap: 40px; /* Plus d'espace entre les avis clients */
+    }
+
+    .container-temoignage {
+        padding: 35px 30px; /* Plus d'espace interne sur grand écran */
+    }
 }

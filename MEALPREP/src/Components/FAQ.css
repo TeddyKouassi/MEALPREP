@@ -1,72 +1,110 @@
-.faq{
-max-width: 600px;
-padding: 20px;
-margin: 40px auto;
-font-family: Arial sans serif;
+/* ==========================================================================
+   1. STYLE MOBILE (Par défaut : compact et centré)
+   ========================================================================== */
+
+.faq {
+    width: 100%;
+    max-width: 650px; /* Élargi légèrement pour un meilleur confort de lecture */
+    padding: 20px 5%; /* Marges internes adaptées aux petits écrans */
+    margin: 20px auto; /* Moins d'espace vertical sur mobile */
+    font-family: Arial, sans-serif; /* Correction : ajout de la virgule */
 }
 
-.section-label{
-font-weight: bold;
-color: #ff4757;
-font-size: 14px;
-letter-spacing: 1px;
-margin-bottom: 8px;
+.section-label {
+    font-weight: bold;
+    color: #ff4757;
+    font-size: 13px; /* Un poil plus petit sur mobile */
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+    text-transform: uppercase;
 }
 
-.section-title{
+.section-title {
      color: #2f3542;
-     font-size: 28px;
-     margin-bottom: 8px;
+     /* Taille fluide : s'adapte parfaitement entre mobile et PC */
+     font-size: clamp(1.4rem, 5vw, 1.8rem); 
+     margin-bottom: 16px;
 }
 
-.faq-item{
+.faq-item {
     background-color: #f1f2f6;
     border-radius: 8px;
     overflow: hidden;
     margin-bottom: 12px;
-    transition: all 0.3s ease;
+    transition: background-color 0.3s ease;
 }
 
-.faq-item :hover{
+/* Correction : suppression de l'espace pour cibler le conteneur lui-même */
+.faq-item:hover {
     background-color: #e4e7eb;
 }
 
-.faq-question{
+.faq-question {
     display: flex;
     justify-content: space-between;
-    list-style: none;
-    font-weight: 600px;
+    align-items: center;
     padding: 16px;
-     align-items: center;
-     cursor: pointer;
-     font-size: 16px;
+    font-weight: 600; /* Correction : pas de 'px' pour le font-weight */
+    cursor: pointer;
+    font-size: 15px; /* Taille confortable pour le pouce sur mobile */
+    color: #2f3542;
+    user-select: none; /* Évite de sélectionner le texte en cliquant vite */
 }
 
-.faq-answer::after{
+/* Correction structurelle : On place le "+" sur la question, pas la réponse */
+.faq-question::after {
     content: "+";
-    font-size: 20px;
+    font-size: 22px;
     color: #ff4757;
     transition: transform 0.3s ease;
+    line-height: 1;
 }
 
-.faq-item.faq-answer::after{
-    transform: rotate(45deg);
+/* Si la question ou le parent (faq-item) a la classe .open ou .active en React */
+.faq-item.open .faq-question::after {
+    transform: rotate(45deg); /* Le "+" tourne et devient une croix "x" pour fermer */
 }
 
-.faq-answer{
+.faq-answer {
     color: #57606f;
-    font-size: 15px;
-    padding: 0px 16px 16px 16px;
+    font-size: 14px; /* Un chouïa plus petit sur mobile pour la hiérarchie */
+    padding: 0 16px 16px 16px;
+    line-height: 1.5;
     animation: fadeIn 0.4s ease-in-out;
 }
 
+/* ==========================================================================
+   2. ADAPTATION ORDINATEUR (Écrans supérieurs à 1024px)
+   ========================================================================== */
+@media screen and (min-width: 1024px) {
+    .faq {
+        padding: 20px; /* On retire le pourcentage inutile sur grand écran */
+        margin: 40px auto; /* On remet vos marges d'origine */
+    }
+
+    .section-label {
+        font-size: 14px;
+    }
+
+    .faq-question {
+        font-size: 16px; /* Taille d'origine pour PC */
+    }
+
+    .faq-answer {
+        font-size: 15px; /* Taille d'origine pour PC */
+    }
+}
+
+/* ==========================================================================
+   3. ANIMATION
+   ========================================================================== */
 @keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(-8px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-   }
+    from {
+        opacity: 0;
+        transform: translateY(-8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

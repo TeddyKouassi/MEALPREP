@@ -1,42 +1,76 @@
-
-.container-celeb{
-    padding: 2px 16px;
-    
+/* ==========================================================================
+   1. LE PARENT : LA GRILLE (À ajouter autour de vos cartes)
+   ========================================================================== */
+.grid-celeb {
+    display: grid;
+    /* Crée automatiquement autant de colonnes de 280px minimum que possible */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px; /* Espace entre les cartes */
+    padding: 20px 5%; /* Marge sur les côtés */
 }
 
-.card-celeb{ 
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  
-  position: relative;
-  border-radius: 20px;
-  overflow: hidden;
-  
+/* ==========================================================================
+   2. STYLE DE LA CARTE (Mobile & PC)
+   ========================================================================== */
+.card-celeb { 
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    width: 100%; /* S'adapte à la taille de la colonne de la grille */
+    transition: transform 0.3s ease;
 } 
 
-.card-celeb img{
-    display: block;
-    height: auto;
-    width: 100%;
+/* Effet au survol (optionnel mais sympa sur PC) */
+.card-celeb:hover {
+    transform: translateY(-5px);
 }
 
-.container-celeb{
+.card-celeb img {
+    display: block;
+    width: 100%;
+    height: 350px; /* Force une hauteur identique pour toutes vos images */
+    object-fit: cover; /* Coupe l'image proprement sans la déformer */
+}
+
+/* Conteneur de texte superposé en bas */
+.container-celeb {
     position: absolute;
     right: 0;
     bottom: 0;
     left: 0;
     color: white;
     text-align: center;
-    padding: 15px;
+    padding: 20px 15px;
+    /* Dégradé sombre pour rendre le texte blanc toujours lisible sur l'image */
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.8)); 
 }
 
-.dishes-tag{
- position: absolute;
- top: 20px;
- left: 0;
- background: #fff;
- color: black;
- padding: 14px 35px;
- font-size: 16px;
- font-weight: 600;
-border-radius: 0 40px 40px 0;
+/* Le Badge (ex: "Entrée", "Plat") */
+.dishes-tag {
+    position: absolute;
+    top: 20px;
+    left: 0;
+    background: #fff;
+    color: black;
+    /* Tailles légèrement réduites pour s'adapter aussi aux petits écrans */
+    padding: 10px 25px; 
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 0 40px 40px 0;
+}
+
+/* ==========================================================================
+   3. AJUSTEMENTS POUR GRANDS ÉCRANS (Media Query)
+   ========================================================================== */
+@media screen and (min-width: 1024px) {
+    .grid-celeb {
+        padding: 40px 8%; /* Plus d'espace sur les côtés sur ordinateur */
+        gap: 40px; /* Plus d'espace entre les cartes */
+    }
+
+    .dishes-tag {
+        padding: 14px 35px; /* On remet vos tailles d'origine sur grand écran */
+        font-size: 16px;
+    }
 }

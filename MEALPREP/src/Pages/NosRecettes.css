@@ -1,0 +1,119 @@
+/* ==========================================================================
+   1. STYLE MOBILE (Par défaut : Grille fluide et boutons tactiles)
+   ========================================================================== */
+
+.recettes{
+    padding: 30px 15px; /* Légèrement réduit sur mobile pour gagner de la place */
+    min-height: 80vh;
+    background-color: #fef1d8; /* Harmonisé avec votre fond général */
+}
+
+/* Correction orthographe : "recettes" au lieu de "reccetes" */
+.recettes h1{
+    text-align: center;
+    color: black;
+    font-size: clamp(1.8rem, 5vw, 2.5rem); /* Titre fluide adapté à l'écran */
+    margin-bottom: 10px;
+}
+
+/* Correction de ciblage : ".recettes p" pour correspondre au h1 */
+.recettes p {
+     text-align: center;
+     color: #555;
+     margin-bottom: 30px;
+}
+
+/*ici c'est la liste des recettes*/
+.recettes-list{
+    display: grid;
+    /* Utilisation de CSS Grid : crée automatiquement des colonnes d'au moins 280px */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    width: 100%;
+}
+
+/*ici c'est la carte des recettes*/
+.recette-card{
+    width: 100%; /* S'adapte à la largeur de sa colonne de grille pour éviter les débordements */
+    background: white;
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column; /* Aligne le contenu verticalement */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.recette-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+/*ici c'est pour les images*/
+.recette-card img{
+  width: 100%;
+  height: 200px;
+  object-fit: cover; /* Recadre proprement sans déformer les photos de plats */
+}
+
+/*ici c'est pour le contenu des recettes*/
+.recette-content{
+    padding: 20px; /* Augmenté pour donner de l'air au texte */
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    flex: 1; /* Permet d'aligner parfaitement les boutons en bas de chaque carte */
+}
+
+/* Alignement et structure du texte à l'intérieur du contenu */
+.recette-content h3 {
+    margin: 0;
+    font-size: 18px;
+    color: #222;
+}
+
+.recette-content p {
+    text-align: left; /* Plus lisible pour un bloc de description */
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.recette-card button{
+    padding: 12px 15px; /* Un peu plus épais pour le confort du pouce sur mobile */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    color: black;
+    background-color: #f1f2f6;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    width: 100%; /* Le bouton prend toute la largeur de la carte sur mobile */
+    margin-top: auto; /* Force le bouton à se coller tout en bas, même si les textes n'ont pas la même longueur */
+}
+
+.recette-card button:hover{
+    background: darkgoldenrod;
+    color: white;
+    font-weight: bold;
+}
+
+/* ==========================================================================
+   2. ADAPTATION ORDINATEUR (Écrans supérieurs à 1024px)
+   ========================================================================== */
+@media screen and (min-width: 1024px) {
+    .recettes {
+        padding: 60px 8%; /* Reprend vos marges d'origine sur grand écran */
+    }
+
+    .recettes-list {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Cartes à 300px d'origine sur PC */
+        gap: 30px; 
+    }
+
+    .recette-card button {
+        width: auto; /* Le bouton reprend sa taille normale sur ordinateur */
+        align-self: flex-start; /* Aligné proprement à gauche sous le texte */
+    }
+}

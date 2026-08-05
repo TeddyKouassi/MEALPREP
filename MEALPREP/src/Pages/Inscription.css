@@ -1,32 +1,84 @@
-.inscription{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 40px;
-    padding: 20px;
-    margin: 0 auto;
-}
+/* ==========================================================================
+   1. STYLE MOBILE (Par défaut : Le formulaire prend toute la place)
+   ========================================================================== */
 
-.inscription-image{
-    flex: 1;
+.inscription {
     display: flex;
+    flex-direction: column; /* On empile les éléments verticalement sur mobile */
     justify-content: center;
-    max-width: 50%;
+    align-items: center;
+    gap: 30px; /* Espace équilibré sur mobile */
+    padding: 30px 5%; /* Marges de sécurité pour les écrans de smartphones */
+    margin: 0 auto;
+    min-height: 100vh;
+    background-color: #fff;
 }
 
-.inscription-image img{
+/* SUR MOBILE : On cache l'image d'illustration pour ne pas encombrer l'écran 
+   et permettre à l'utilisateur de s'inscrire rapidement sans scroller inutilement */
+.inscription-image {
+    display: none; 
+}
+
+/* Le bloc qui contient votre titre et votre formulaire d'inscription */
+.inscription-container {
     width: 100%;
-    height: auto;
-    border-radius: 8px;
-    object-fit: cover;
-    max-height: 600px;
-
+    max-width: 450px; /* Taille idéale pour un formulaire bien lisible */
+    padding: 20px 0;
 }
 
-.form-input{
+/* Le conteneur interne de vos champs (votre code d'origine) */
+.form-input {
     display: grid;
     gap: 15px;
     margin-top: 20px;
-    
+    width: 100%;
 }
 
+/* Stylisation responsive des champs de saisie pour le tactile */
+.form-input input,
+.form-input select {
+    padding: 12px; /* Plus épais pour faciliter le clic au pouce */
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px; /* Empêche le zoom automatique agaçant sur l'iPhone (iOS) */
+    width: 100%;
+    outline: none;
+}
+
+
+/* ==========================================================================
+   2. ADAPTATION ORDINATEUR (Écrans supérieurs à 1024px : Mode côte à côte)
+   ========================================================================== */
+@media screen and (min-width: 1024px) {
+    .inscription {
+        flex-direction: row; /* On remet l'image et le formulaire côte à côte */
+        justify-content: space-between;
+        align-items: center;
+        gap: 60px; /* Plus d'espace entre l'image et le formulaire */
+        padding: 40px 8%; /* Marges standards pour les grands écrans */
+        max-width: 1200px; /* Empêche le contenu de trop s'écarter sur écran géant */
+    }
+
+    /* On fait réapparaître l'image sur ordinateur */
+    .inscription-image {
+        display: flex;
+        flex: 1;
+        justify-content: center;
+        max-width: 50%; /* L'image prend la moitié de l'espace de la page */
+    }
+
+    .inscription-image img {
+        width: 100%;
+        height: auto;
+        border-radius: 15px; /* Arrondi un peu plus doux et moderne */
+        object-fit: cover;
+        max-height: 600px; /* On conserve votre limite d'origine */
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05); /* Petite ombre esthétique */
+    }
+
+    .inscription-container {
+        flex: 1;
+        max-width: 450px;
+    }
+}

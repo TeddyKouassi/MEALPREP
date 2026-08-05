@@ -1,48 +1,93 @@
+/* ==========================================================================
+   1. STYLE MOBILE (Par défaut)
+   ========================================================================== */
 
-.offers{
-    padding: 80px 20px;
+.offers {
+    padding: 40px 15px; /* Évite d'occuper trop d'espace vertical sur mobile */
     text-align: center;
+    background-color: #fef1d8; /* Harmonisé avec le reste de votre site */
 }
 
-.offre-header{
+.offre-header {
+    width: 100%;
     max-width: 700px;
     margin: 0 auto;
-
+    padding: 0 10px;
 }
 
-.offre-1{
+.offre-1 {
     color: #e63946;
-    font-size: 14px;
-    font-weight: 600px;
+    font-size: 13px;
+    font-weight: 600; /* Correction : retrait de 'px' */
+    letter-spacing: 1px;
+    text-transform: uppercase;
 }
 
-.offre-title{
-    font-size: 42px;
+.offre-title {
+    /* Taille fluide : s'adapte automatiquement entre mobile et PC */
+    font-size: clamp(1.8rem, 5vw, 2.5rem); 
     font-weight: 800;
-    margin: 20px 0;
+    margin: 15px 0;
     color: #222;
+    line-height: 1.2;
 }
 
-.ofre-description{
-    font-size: 16px;
+.offre-description { /* Correction orthographe : deux 'f' */
+    font-size: 15px;
     color: #666;
-    line-height: 1.6;
+    line-height: 1.5;
 }
 
-.offre-cards{
+/* LE CONTENEUR DES CARTES d'offres */
+.offre-cards {
     display: flex;
+    flex-direction: column; /* Les offres s'empilent verticalement sur mobile */
     gap: 20px;
-    margin-top: 50px;
-    justify-content: center;
-    flex-wrap: wrap;
+    margin-top: 35px;
+    align-items: center;
+    width: 100%;
 }
 
-.offre-2{
-    width: 250px;
-    height: 150px;
+/* CHAQUE CARTE D'OFFRE */
+.offre-2 {
+    width: 100%;
+    max-width: 320px; /* Taille idéale sur smartphone */
+    min-height: 150px; /* Hauteur minimale : la carte s'agrandira si le texte est long */
     background-color: #f5F5F5;
     border-radius: 15px;
     display: flex;
+    flex-direction: column; /* Permet d'empiler du texte/icônes proprement dedans */
     align-items: center;
     justify-content: center;
+    padding: 20px; /* Ajout d'un padding de sécurité interne */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.offre-2:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+}
+
+/* ==========================================================================
+   2. ADAPTATION TABLETTES ET ORDINATEURS (Écrans supérieurs à 768px)
+   ========================================================================== */
+@media screen and (min-width: 768px) {
+    .offers {
+        padding: 80px 20px; /* On remet vos marges d'origine */
+    }
+
+    .offre-cards {
+        flex-direction: row; /* Aligne les cartes côte à côte dès qu'il y a de la place */
+        flex-wrap: wrap; /* Passe à la ligne si l'écran rétrécit */
+        justify-content: center;
+        margin-top: 50px;
+    }
+
+    .offre-2 {
+        /* flex-grow: 0 (ne grandit pas trop), flex-shrink: 1 (peut rétrécir), flex-basis: 250px (taille de base) */
+        flex: 0 1 250px; 
+        width: auto;
+        max-width: none;
+    }
 }

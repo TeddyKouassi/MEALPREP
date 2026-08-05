@@ -1,70 +1,99 @@
-.connexion{
+/* ==========================================================================
+   1. STYLE MOBILE (Par défaut : S'adapte dès 320px de large)
+   ========================================================================== */
+
+.connexion {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    transition: 0.5s;
+    min-height: 100vh; /* Permet un centrage vertical parfait, même si l'écran est petit */
     background-color: rgb(255, 255, 255);
-    
+    padding: 20px; /* Marge de sécurité pour éviter que la boîte ne colle aux bords de l'écran */
 }
 
-.connexion :hover{
-    background-color: antiquewhite;
-    cursor: pointer;
-
-}
-
-.connexion-container{
-    width: 350px;
-    padding: 20px;
+/* ÉTAPE MAGIQUE POUR LA RESPONSIVITÉ */
+.connexion-container {
+    width: 100%; /* S'adapte à la largeur des petits smartphones */
+    max-width: 350px; /* Bloque la boîte à vos 350px d'origine sur les écrans plus grands */
+    padding: 30px 20px; /* Un peu plus d'espace en haut et en bas */
     border-radius: 20px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Ombre adoucie plus moderne */
+    background-color: #fff;
+    transition: background-color 0.3s ease;
 }
 
-.connexion-container h2{
+/* Correction : On applique l'effet de survol uniquement sur la boîte elle-même */
+.connexion-container:hover {
+    background-color: antiquewhite;
+}
+
+.connexion-container h2 {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     font-weight: bold;
-    font-size: 30px;
+    /* Utilisation de clamp() pour adapter légèrement la taille du titre */
+    font-size: clamp(1.5rem, 5vw, 1.8rem); 
+    color: #222;
 }
 
-.input{
+.input {
     display: flex;
     flex-direction: column;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     position: relative;
-    font-size: 18px;
+    font-size: 15px; /* Épaisseur de police plus élégante */
     font-weight: bold;
+    color: #333;
+    gap: 8px; /* Espace propre entre le label et l'input */
 }
 
-.input input{
-    padding: 10px;
-
-}
-
-.btn-connexion{
+.input input {
+    padding: 12px; /* Hauteur augmentée pour faciliter la saisie tactile avec le pouce */
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px; /* Empêche le zoom forcé désagréable du navigateur sur iPhone (iOS) */
     width: 100%;
-    padding: 10px;
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+
+.input input:focus {
+    border-color: #27ae60; /* L'input s'illumine en vert quand on clique dedans */
+}
+
+.btn-connexion {
+    width: 100%;
     cursor: pointer;
     font-weight: bold;
-    transition: 0.3s;
     font-size: 16px;
-    padding: 14px;
+    padding: 14px; /* Nettoyage du doublon de padding d'origine */
     border: none;
     color: #fff;
     background-color: #27ae60;
     border-radius: 15px;
+    transition: background-color 0.3s ease, transform 0.1s ease;
 }
 
-.btn-connexion:hover{
+.btn-connexion:hover {
     background-color: #219150;
 }
 
-.lien a{
-    text-decoration: none;
-    color: #27ae60;
+.btn-connexion:active {
+    transform: scale(0.98); /* Petit effet d'enfoncement très agréable au clic */
 }
 
-.lien a:hover{
+.lien {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.lien a {
+    text-decoration: none;
+    color: #27ae60;
+    font-weight: 500;
+}
+
+.lien a:hover {
     text-decoration: underline;
 }

@@ -5,12 +5,13 @@ import "./Nosmenu.css";
 
 function Nosmenu(){
     const[categorieActive, setCategorieActive]= useState("burger");
-    //  ici j'ai procédé au filtrage du gros tableau unique selon la catégorie cliquée
+    //  ici j'ai procédé au filtrage du grand tableau unique selon la catégorie cliquée
     const platsFiltres = DATA_PLATS.filter(plat=> plat.categorie===categorieActive);
     return(
         <>
         <section className="Nos-menu">
         <div className="categories-buttons">
+            
             <button className={categorieActive === "burger" ? "btn-categorie active" : "btn-categorie"}
             onClick={() => setCategorieActive("burger")}
             >

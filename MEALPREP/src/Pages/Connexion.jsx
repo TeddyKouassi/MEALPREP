@@ -20,7 +20,7 @@ function Connexionmealprep(){
         try { 
             const response = await login(email, password); 
             
-            if (response) {
+            if (response) { 
                 navigate('/Dashboard'); 
             } else {
                 setError('Erreur de connexion : Aucun jeton reçu.');
