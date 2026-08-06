@@ -34,8 +34,8 @@ function About() {
             <h3>HORAIRES D'OUVERTURE</h3>
             <p>Lun – Jeu : 10h00 – 01h00</p>
             <p>Ven – Dim : 11h00 – 22h00</p>
-            <button className="flex items-center justify-center bg-white rounded-full w-32 h-12 transition duration-150 hover:bg-[#fc9e25] ">
-              Créer ton plan<span className="text-xl">🔥</span>
+            <button className="flex items-center justify-center self-center bg-white rounded-full w-48 h-12 transition duration-150 hover:bg-[#fc9e25]">
+              Créer ton plan<span className="text-xl ml-1">🔥</span>
             </button>
           </div>
         </div>

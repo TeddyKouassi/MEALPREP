@@ -1,16 +1,14 @@
-/* ==========================================================================
-   1. STYLE MOBILE (Par défaut)
-   ========================================================================== */
 
-/* LES BOUTONS DE CATÉGORIES */
+
+
 .categories-buttons {
     display: flex;
-    justify-content: flex-start; /* Aligné à gauche pour permettre le scroll sur mobile */
-    gap: 12px; /* Espace légèrement réduit sur mobile */
+    justify-content: flex-start; 
+    gap: 12px; 
     margin: 20px 0;
-    padding: 10px 5%; /* Marge de sécurité pour le défilement */
+    padding: 10px 5%; 
     
-    /* MAGIE RESPONSIVE : Permet de faire défiler les boutons au doigt sur mobile 
+    /* Permet de faire défiler les boutons au doigt sur mobile 
        si la liste est trop longue pour l'écran */
     overflow-x: auto;
     white-space: nowrap;
@@ -24,7 +22,7 @@
 }
 
 .btn-categorie {
-    padding: 10px 20px; /* Un peu plus compact pour le mobile */
+    padding: 10px 20px; 
     border: 1px solid #e2b49a;
     border-radius: 25px;
     background: transparent;
@@ -35,11 +33,7 @@
     transition: all 0.3s ease;
 }
 
-.btn-categorie.active {
-    border-color: #63050c;
-    background-color: #63050c; /* Optionnel : fond coloré pour mieux voir le bouton actif */
-    color: white;
-}
+
 
 .btn-categorie:hover,
 .btn-categorie.active:hover { 
@@ -51,10 +45,10 @@
 /* LA GRILLE DES PLATS */
 .plats-grid {
     display: grid;
-    gap: 25px; /* Espace entre les cartes */
-    /* Crée automatiquement le bon nombre de colonnes d'au moins 280px */
+    gap: 25px; 
+    
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
-    padding: 20px 5%; /* Aligné avec vos autres sections */
+    padding: 20px 5%; 
 }
 
 /* LES CARTES DE PLATS */
@@ -67,7 +61,7 @@
     transition: transform 0.3s ease;
 }
 
-/* Légère élévation de la carte au survol global */
+
 .plat-card:hover {
     transform: translateY(-5px);
 }
@@ -75,7 +69,7 @@
 .plat-image-container {
     height: 180px;
     width: 100%;
-    overflow: hidden; /* Coupe l'image qui dépasse pendant l'animation */
+    overflow: hidden; 
     cursor: pointer;
 }
 
@@ -83,15 +77,15 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.5s ease; /* Transition appliquée sur l'image elle-même */
+    transition: transform 0.5s ease; 
 }
 
-/* L'image tourne et zoome à l'intérieur du cadre au survol */
+
 .plat-card:hover .plat-image {
     transform: scale(1.1) rotate(3deg);
 }
 
-/* BLOC D'INFORMATIONS DU PLAT */
+
 .plat-info-bande {
     background-color: darkgoldenrod;
     color: white;
@@ -101,7 +95,7 @@
 .plat-ligne-titre {
     display: flex;
     justify-content: space-between;
-    align-items: center; /* Aligne verticalement le titre et le prix si présent */
+    align-items: center; 
     margin-bottom: 10px;
     gap: 10px;
 }
@@ -109,7 +103,7 @@
 .plat-titre {
     margin: 0;
     text-transform: uppercase;
-    font-size: clamp(1.1rem, 3vw, 1.3rem); /* Titre fluide */
+    font-size: clamp(1.1rem, 3vw, 1.3rem); 
     font-weight: 700;
 }
 
@@ -121,27 +115,25 @@
 }
 
 
-/* ==========================================================================
-   2. ADAPTATION ORDINATEUR (Écrans supérieurs à 1024px)
-   ========================================================================== */
+
 @media screen and (min-width: 1024px) {
     .categories-buttons {
-        justify-content: center; /* On recentre les boutons sur grand écran */
+        justify-content: center; 
         padding: 0;
         margin: 30px 0;
-        overflow: visible; /* Plus besoin de scroller */
+        overflow: visible; 
     }
 
     .btn-categorie {
-        padding: 10px 25px; /* Reprend vos tailles d'origine */
+        padding: 10px 25px; 
     }
 
     .plats-grid {
-        gap: 30px; /* Plus d'espace entre les cartes sur PC */
-        padding: 40px 8%; /* Marges standards pour ordinateur */
+        gap: 30px; 
+        padding: 40px 8%; 
     }
     
     .plat-image-container {
-        height: 200px; /* Un peu plus grand sur grand écran pour l'esthétique */
+        height: 200px; 
     }
 }

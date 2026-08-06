@@ -1,46 +1,42 @@
-/* ==========================================================================
-   1. STYLE MOBILE (Par défaut : empilé verticalement)
-   ========================================================================== */
+
 
 .menu-section {
     display: flex;
-    flex-direction: column; /* Les blocs s'empilent sur smartphone */
-    gap: 20px; /* Espace entre les éléments sur mobile */
-    padding: 20px 5%; /* Marges de sécurité sur les côtés */
+    flex-direction: column; 
+    gap: 20px; 
+    padding: 20px 5%; 
     width: 100%;
 }
 
 .container-image {
     display: flex;
-    flex-direction: column; /* Les images s'empilent aussi si vous en avez plusieurs */
+    flex-direction: column; 
     gap: 15px;
     width: 100%;
 }
 
-/* Règle de sécurité pour vos images */
+/* ici j'ai procédé comme ça pour protéger mes images */
 .container-image img {
     width: 100%;
     height: auto;
     max-height: 400px; /* Évite que l'image ne devienne trop géante sur mobile */
     object-fit: cover; /* Coupe proprement l'image sans la déformer */
-    border-radius: 15px; /* Optionnel : pour de jolis bords arrondis */
+    border-radius: 15px; 
 }
 
-/* ==========================================================================
-   2. ADAPTATION ORDINATEUR (Écrans supérieurs à 1024px)
-   ========================================================================== */
+
 @media screen and (min-width: 1024px) {
     .menu-section {
-        flex-direction: row; /* Aligne le contenu et le bloc image côte à côte */
-        justify-content: space-between; /* Aligne un bloc à gauche, un à droite */
-        align-items: center; /* Centre verticalement les blocs */
-        padding: 60px 8%; /* Reprend vos marges d'origine sur grand écran */
-        gap: 50px; /* Plus d'espace entre les deux grands blocs */
+        flex-direction: row; 
+        justify-content: space-between; 
+        align-items: center; 
+        padding: 60px 8%; 
+        gap: 50px; 
     }
 
     .container-image {
-        flex-direction: row; /* Si vous avez plusieurs images, elles se mettent côte à côte */
+        flex-direction: row; /* pour que les images se mettent côte à côte */
         justify-content: space-between;
-        width: 50%; /* Le bloc image prend la moitié de l'écran sur PC */
+        width: 50%; 
     }
 }

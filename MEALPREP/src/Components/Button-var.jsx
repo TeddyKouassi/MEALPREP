@@ -1,9 +1,9 @@
 
-import './Navbar.css';
+
 
 function Buttonvar ({text, bibi}){
     return(
-    <button class={bibi}>{text}</button>
+    <button class={bibi} >{text}</button>
     )
 }
 

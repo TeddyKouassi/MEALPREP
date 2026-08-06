@@ -28,6 +28,7 @@ background-color: #f9f7f2;
     justify-content: space-between;
     align-items: center;
     max-width: 1200px;
+    margin: 30px;
 }
 
 .apropos-hero-content{

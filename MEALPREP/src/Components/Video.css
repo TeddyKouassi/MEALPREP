@@ -1,41 +1,29 @@
-/* ==========================================================================
-   1. STYLE MOBILE (Par défaut : Ratio fluide et naturel)
-   ========================================================================== */
-
 .about-video {
-    width: 100%;
-    max-width: 1400px;
-    margin: 20px auto; /* Centre le bloc horizontalement avec 20px d'espace haut/bas */
-    border-radius: 12px; /* Coins légèrement plus discrets sur petit écran */
+    width: 90%;          
+    max-width: 1200px;   
+    margin: 80px auto;   
+    border-radius: 12px; 
     overflow: hidden;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    
-    /* Correction : On supprime le height: 100vh qui écrasait tout sur mobile, 
-       et on laisse la hauteur s'adapter naturellement à la vidéo */
     height: auto; 
+    
+
 }
 
 .about-video video {
-    display: block; /* Remplacé flex par block, idéal pour une image ou vidéo */
+    display: block; 
     width: 100%;
     height: auto;
-    object-fit: cover; /* S'assure que la vidéo remplit bien son espace sans se déformer */
+    object-fit: cover;
 }
 
-/* ==========================================================================
-   2. ADAPTATION ORDINATEUR (Écrans supérieurs à 1024px)
-   ========================================================================== */
 @media screen and (min-width: 1024px) {
     .about-video {
-        margin: 40px auto; /* Plus d'espace vertical sur grand écran */
-        border-radius: 20px; /* On remet vos bords arrondis d'origine */
+        width: 85%;       
+        margin: 120px auto; 
+        border-radius: 20px; 
+        height: auto; 
         
-        /* OPTIONNEL : Si vous voulez vraiment un effet plein écran (cinéma) sur PC,
-           vous pouvez activer ces deux lignes. Sinon, laissez la hauteur en auto. */
-        /* height: 70vh; */
-    }
-    
-    .about-video video {
-        /* height: 100%; */ /* À activer uniquement si vous activez le height: 70vh ci-dessus */
+        
     }
 }

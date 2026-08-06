@@ -29,8 +29,8 @@ function Offresection() {
                   </p>
                 </div>
 
-                <div class="">
-                  <button className="flex items-center justify-center bg-white rounded-full w-32 h-12 transition duration-150 hover:bg-[#fc9e25] ">
+                <div className="flex justify-center w-full my-4">
+                  <button className="flex items-center justify-center bg-white rounded-full w-32 h-12 transition duration-150 hover:bg-[#fc9e25]">
                     1500 FCFA <span className="text-xl">🔥</span>
                   </button>
                 </div>
@@ -48,8 +48,8 @@ function Offresection() {
                   </p>
                 </div>
 
-                <div class="">
-                  <button className="flex items-center justify-center bg-white rounded-full w-32 h-12 transition duration-150 hover:bg-[#fc9e25] ">
+                <div className="flex justify-center w-full my-4">
+                  <button className="flex items-center justify-center bg-white rounded-full w-32 h-12 transition duration-150 hover:bg-[#fc9e25]">
                     1500 FCFA <span className="text-xl">🔥</span>
                   </button>
                 </div>
@@ -68,9 +68,9 @@ function Offresection() {
                 </p>
               </div>
 
-              <div class="">
-                <button className="flex items-center justify-center bg-white rounded-full w-32 h-12 transition duration-150 hover:bg-[#fc9e25] ">
-                  1000 FCFA <span className="text-xl">🔥</span>
+              <div className="flex justify-center w-full my-4">
+                <button className="flex items-center justify-center bg-white rounded-full w-32 h-12 transition duration-150 hover:bg-[#fc9e25]">
+                  1500 FCFA <span className="text-xl">🔥</span>
                 </button>
               </div>
             </div>

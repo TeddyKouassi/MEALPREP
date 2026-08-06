@@ -1,7 +1,10 @@
-
+import Menusection from "../Components/Menusection";
+import Offresection from "../Components/Offresection";
 function FormRecettes(){
     return(
         <> 
+        <Menusection/> 
+        <Offresection/> 
           <div className="form-recette">
 
             <h2> Ajouter une recette</h2>

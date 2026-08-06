@@ -1,14 +1,11 @@
-/* ==========================================================================
-   1. STYLE MOBILE (Par défaut : Grille fluide et boutons tactiles)
-   ========================================================================== */
 
 .recettes{
-    padding: 30px 15px; /* Légèrement réduit sur mobile pour gagner de la place */
+    padding: 30px 15px; 
     min-height: 80vh;
-    background-color: #fef1d8; /* Harmonisé avec votre fond général */
+    background-color: #fef1d8; 
 }
 
-/* Correction orthographe : "recettes" au lieu de "reccetes" */
+
 .recettes h1{
     text-align: center;
     color: black;
@@ -16,7 +13,7 @@
     margin-bottom: 10px;
 }
 
-/* Correction de ciblage : ".recettes p" pour correspondre au h1 */
+
 .recettes p {
      text-align: center;
      color: #555;
@@ -26,7 +23,7 @@
 /*ici c'est la liste des recettes*/
 .recettes-list{
     display: grid;
-    /* Utilisation de CSS Grid : crée automatiquement des colonnes d'au moins 280px */
+    
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 20px;
     justify-content: center;
@@ -35,13 +32,13 @@
 
 /*ici c'est la carte des recettes*/
 .recette-card{
-    width: 100%; /* S'adapte à la largeur de sa colonne de grille pour éviter les débordements */
+    width: 100%; 
     background: white;
     border-radius: 30px;
     overflow: hidden;
     box-shadow: 0 4px 10px rgba(0,0,0,0.05);
     display: flex;
-    flex-direction: column; /* Aligne le contenu verticalement */
+    flex-direction: column; 
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -54,19 +51,19 @@
 .recette-card img{
   width: 100%;
   height: 200px;
-  object-fit: cover; /* Recadre proprement sans déformer les photos de plats */
+  object-fit: cover; 
 }
 
 /*ici c'est pour le contenu des recettes*/
 .recette-content{
-    padding: 20px; /* Augmenté pour donner de l'air au texte */
+    padding: 20px; 
     display: flex;
     flex-direction: column;
     gap: 12px;
-    flex: 1; /* Permet d'aligner parfaitement les boutons en bas de chaque carte */
+    flex: 1; 
 }
 
-/* Alignement et structure du texte à l'intérieur du contenu */
+
 .recette-content h3 {
     margin: 0;
     font-size: 18px;
@@ -74,14 +71,14 @@
 }
 
 .recette-content p {
-    text-align: left; /* Plus lisible pour un bloc de description */
+    text-align: left; 
     margin: 0;
     font-size: 14px;
     line-height: 1.5;
 }
 
 .recette-card button{
-    padding: 12px 15px; /* Un peu plus épais pour le confort du pouce sur mobile */
+    padding: 12px 15px; 
     border: none;
     border-radius: 8px;
     cursor: pointer;
@@ -99,21 +96,20 @@
     font-weight: bold;
 }
 
-/* ==========================================================================
-   2. ADAPTATION ORDINATEUR (Écrans supérieurs à 1024px)
-   ========================================================================== */
+
+  
 @media screen and (min-width: 1024px) {
     .recettes {
-        padding: 60px 8%; /* Reprend vos marges d'origine sur grand écran */
+        padding: 60px 8%; 
     }
 
     .recettes-list {
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Cartes à 300px d'origine sur PC */
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
         gap: 30px; 
     }
 
     .recette-card button {
-        width: auto; /* Le bouton reprend sa taille normale sur ordinateur */
-        align-self: flex-start; /* Aligné proprement à gauche sous le texte */
+        width: auto; 
+        align-self: flex-start; 
     }
 }

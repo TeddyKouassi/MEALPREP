@@ -1,28 +1,26 @@
-/* ==========================================================================
-   1. STYLE MOBILE (Par défaut : S'adapte dès 320px de large)
-   ========================================================================== */
+
 
 .connexion {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh; /* Permet un centrage vertical parfait, même si l'écran est petit */
+    min-height: 100vh; 
     background-color: rgb(255, 255, 255);
-    padding: 20px; /* Marge de sécurité pour éviter que la boîte ne colle aux bords de l'écran */
+    padding: 20px; 
 }
 
-/* ÉTAPE MAGIQUE POUR LA RESPONSIVITÉ */
+/*  POUR LA RESPONSIVITÉ */
 .connexion-container {
-    width: 100%; /* S'adapte à la largeur des petits smartphones */
-    max-width: 350px; /* Bloque la boîte à vos 350px d'origine sur les écrans plus grands */
-    padding: 30px 20px; /* Un peu plus d'espace en haut et en bas */
+    width: 100%; 
+    max-width: 350px; 
+    padding: 30px 20px; 
     border-radius: 20px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Ombre adoucie plus moderne */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); 
     background-color: #fff;
     transition: background-color 0.3s ease;
 }
 
-/* Correction : On applique l'effet de survol uniquement sur la boîte elle-même */
+
 .connexion-container:hover {
     background-color: antiquewhite;
 }
@@ -31,7 +29,7 @@
     text-align: center;
     margin-bottom: 25px;
     font-weight: bold;
-    /* Utilisation de clamp() pour adapter légèrement la taille du titre */
+    
     font-size: clamp(1.5rem, 5vw, 1.8rem); 
     color: #222;
 }
@@ -41,24 +39,24 @@
     flex-direction: column;
     margin-bottom: 20px;
     position: relative;
-    font-size: 15px; /* Épaisseur de police plus élégante */
+    font-size: 15px; 
     font-weight: bold;
     color: #333;
-    gap: 8px; /* Espace propre entre le label et l'input */
+    gap: 8px; 
 }
 
 .input input {
-    padding: 12px; /* Hauteur augmentée pour faciliter la saisie tactile avec le pouce */
+    padding: 12px; 
     border: 1px solid #ccc;
     border-radius: 8px;
-    font-size: 16px; /* Empêche le zoom forcé désagréable du navigateur sur iPhone (iOS) */
+    font-size: 16px; 
     width: 100%;
     outline: none;
     transition: border-color 0.2s ease;
 }
 
 .input input:focus {
-    border-color: #27ae60; /* L'input s'illumine en vert quand on clique dedans */
+    border-color: #27ae60; 
 }
 
 .btn-connexion {
@@ -66,7 +64,7 @@
     cursor: pointer;
     font-weight: bold;
     font-size: 16px;
-    padding: 14px; /* Nettoyage du doublon de padding d'origine */
+    padding: 14px; 
     border: none;
     color: #fff;
     background-color: #27ae60;
@@ -79,7 +77,7 @@
 }
 
 .btn-connexion:active {
-    transform: scale(0.98); /* Petit effet d'enfoncement très agréable au clic */
+    transform: scale(0.98); 
 }
 
 .lien {
