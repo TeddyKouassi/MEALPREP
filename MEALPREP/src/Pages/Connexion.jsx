@@ -1,3 +1,5 @@
+import Menusection from "../Components/Menusection";
+import Offresection from "../Components/Offresection";
 import './Connexion.css'; 
 
 import { Connexion as login } from '../Services/authServices'; 
@@ -37,6 +39,9 @@ function Connexionmealprep(){
 
     return (
         <>
+        <Menusection/> 
+        <Offresection/> 
+        
         <section className="connexion"> 
             <div className="connexion-container"> 
                 <h2>Connexion</h2>

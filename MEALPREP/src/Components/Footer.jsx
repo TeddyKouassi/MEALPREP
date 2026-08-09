@@ -27,28 +27,20 @@ function Footer() {
 
           <div>
             <h4>Menu</h4>
-            <p>Recettes</p>
-            <p>Offres</p>
-            <p>Catégories</p>
+            <p>Nos-recettes</p>
+           
           </div>
 
           <div>
-            <h4>Company</h4>
+            
             <p>About</p>
-            <p>Services</p>
             <p>Gallery</p>
           </div>
 
           <div>
-            <h4>Support</h4>
+           
             <p>FAQ</p>
             <p>Contact</p>
-          </div>
-
-          <div>
-            <h4>Legal</h4>
-            <p>Privacy Policy</p>
-            <p>Terms</p>
           </div>
 
         </div>

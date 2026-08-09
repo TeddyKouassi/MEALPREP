@@ -1,3 +1,5 @@
+import Menusection from "../Components/Menusection";
+import Offresection from "../Components/Offresection";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Inscription as registerServices} from "../Services/authServices";
@@ -33,6 +35,9 @@ function Inscription(){
     
     return(
         <>
+
+        <Menusection/> 
+        <Offresection/> 
         <section className="inscription">
             <div className="inscription-image"> 
         <img src={nourriture} alt="nourriture"  />

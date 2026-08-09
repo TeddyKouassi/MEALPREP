@@ -1,6 +1,4 @@
-/* ==========================================================================
-   1. STYLE MOBILE (Par défaut)
-   ========================================================================== */
+
 
 .menu-header{
     font-size: clamp(2rem, 5vw, 2.6rem); /* Taille fluide pour s'adapter aux petits écrans */
@@ -14,32 +12,31 @@
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   border-radius: 20px;
   overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transition unique corrigée */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; 
   width: 100%;
 } 
 
 .card-menu img {
     display: block;
     width: 100%;
-    height: 250px; /* Hauteur fixe pour uniformiser toutes vos images de plats */
-    object-fit: cover; /* Coupe l'image sans la déformer */
+    height: 250px; 
+    object-fit: cover; 
     transition: transform 0.5s ease;
 }
 
 .container-menu {
-  padding: 15px 20px; /* Un peu plus d'espace interne pour le confort tactile */
+  padding: 15px 20px; 
 }
 
 .card-container{
     display: grid;
-    /* CSS Grid automatique : gère les colonnes sur mobile, tablette et PC sans media queries */
+    
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 25px;
     justify-content: center;
-    padding: 20px 5%; /* Marges de sécurité sur les côtés */
+    padding: 20px 5%; 
 }
 
-/* Éléments de survol et d'animation corrigés */
 .card-menu:hover {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.3);
     transform: translateY(-5px);
@@ -56,17 +53,15 @@
   cursor: pointer;
 }
 
-/* ==========================================================================
-   2. ADAPTATION ORDINATEUR (Écrans supérieurs à 1024px)
-   ========================================================================== */
+
 @media screen and (min-width: 1024px) {
     .menu-header {
-        text-align: left; /* Aligné à gauche sur PC */
+        text-align: left; 
         padding-left: 8%;
     }
 
     .card-container {
-        padding: 40px 8%; /* Plus d'espace sur les côtés sur grand écran */
+        padding: 40px 8%; 
         gap: 30px;
     }
 }

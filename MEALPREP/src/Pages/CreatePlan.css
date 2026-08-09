@@ -1,0 +1,67 @@
+.create-plan{
+    max-width: 600px;
+    margin:50px auto;
+    padding:30px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.create-plan h1{
+    margin-bottom: 10px;
+    font-size: 32px;
+}
+
+.create-plan h2{
+    margin-bottom: 25px;
+    font-size:22px;
+}
+
+.create-plan{
+    color: #666;
+    margin-bottom: 35px;
+}
+
+.create-plan button{
+    padding: 12px 20px;
+    margin: 8px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background: white;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.create-plan button:hover{
+  background: darkgoldenrod;
+  font-weight: bold;
+  color: black;
+  border: none;
+  margin-top: 25px;
+}
+
+
+
+@media (max-width:600px){
+    .create-plan{
+        margin:30px 15px;
+        padding:20px 15px;
+    }
+
+    .create-plan h1{
+        font-size: 26px;
+    }
+
+    .create-plan p{
+        font-size: 14px;
+        margin-bottom: 25px;
+    }
+
+    .create-plan h2{
+        font-size: 19px;
+    }
+
+    .create-plan button{
+        width: 100px;
+        margin: 6px 0;
+    }
+}

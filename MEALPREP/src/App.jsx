@@ -10,6 +10,7 @@ import DashbordClient from './Pages/dashbord/DashbordClient';
 import DashbordAdmin from './Pages/dashbord/DashbordAdmin';
 import Recettes from './Pages/dashbord/Recettes';
 import NosRecettes from './Pages/NosRecettes';
+import CreatePlan from './Pages/CreatePlan';
 import Footer from "../src/Components/Footer";
 
 function App (){
@@ -29,6 +30,7 @@ function App (){
             <Route path="/recettes" element={<Recettes />} />
             <Route path="/dashbord/client" element={<DashbordClient />} />
             <Route path="/nos-recettes" element={<NosRecettes />} />
+            <Route path="/create-plan" element={<CreatePlan />} />
             
         
           </Routes>

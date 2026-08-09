@@ -1,6 +1,6 @@
 import './Hero.css';
 
-
+import { Link } from 'react-router-dom';
 
 
 function Hero(){
@@ -15,7 +15,9 @@ function Hero(){
                 </p>
             </div>
             <div>
+                <Link to="/create-plan">
                 <button className="hero-btn">Créer mon plan gratuit </button>
+                </Link>
             </div>
         </section>
         </>
