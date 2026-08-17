@@ -1,88 +1,338 @@
+/* =========================================================
+   SECTION OFFRES
+   ========================================================= */
 
 .offers {
-    padding: 40px 15px; 
-    text-align: center;
-    background-color: #fef1d8; 
+    width: 100%;
+    padding: 60px 5%;
+    background-color: #fef1d8;
+    overflow: hidden;
 }
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
 
 .offre-header {
     width: 100%;
-    max-width: 700px;
-    margin: 0 auto;
-    padding: 0 10px;
+    max-width: 800px;
+    margin: 0 auto 50px;
+    text-align: center;
 }
 
 .offre-1 {
+    display: inline-block;
     color: #e63946;
     font-size: 13px;
-    font-weight: 600; 
-    letter-spacing: 1px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
     text-transform: uppercase;
+    margin-bottom: 12px;
 }
 
 .offre-title {
-    /* Taille fluide : s'adapte automatiquement entre mobile et PC */
-    font-size: clamp(1.8rem, 5vw, 2.5rem); 
-    font-weight: 800;
-    margin: 15px 0;
+    margin: 0 auto 18px;
     color: #222;
-    line-height: 1.2;
+    font-size: clamp(1.8rem, 5vw, 3rem);
+    font-weight: 900;
+    line-height: 1.15;
+    text-transform: uppercase;
 }
 
-.offre-description { 
-    font-size: 15px;
+.offre-description {
+    margin: 0 auto;
+    max-width: 650px;
     color: #666;
-    line-height: 1.5;
+    font-size: clamp(14px, 2vw, 17px);
+    line-height: 1.6;
 }
 
+
+/* =========================================================
+   CONTENEUR DES CARTES
+   ========================================================= */
 
 .offre-cards {
-    display: flex;
-    flex-direction: column; 
-    gap: 20px;
-    margin-top: 35px;
-    align-items: center;
     width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns: 1fr;
+
+    gap: 20px;
 }
 
-/* CHAQUE CARTE D'OFFRE */
-.offre-2 {
+
+/* =========================================================
+   CARTES
+   ========================================================= */
+
+.offre-card {
+    position: relative;
+
     width: 100%;
-    max-width: 320px; 
-    min-height: 150px; 
-    background-color: #f5F5F5;
-    border-radius: 15px;
+    min-height: 320px;
+
+    border-radius: 25px;
+
+    overflow: hidden;
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
     display: flex;
-    flex-direction: column; 
+    align-items: center;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+/* =========================================================
+   IMAGES DES CARTES
+   ========================================================= */
+
+.offre-card-small {
+    background-image: url("https://framerusercontent.com/images/PDrjHbZPzqvaYnSBHOi3BevkHEA.png?width=2192&height=1152");
+}
+
+.offre-card-peanut {
+    background-image: url("https://framerusercontent.com/images/G9pCFoPAGXfnPwcyrzkEgyB4F8.png?width=2192&height=1152");
+}
+
+.offre-card-large {
+    background-image: url("https://framerusercontent.com/images/yBpDxeFHBzSGgy8HDjSPCQLxo.png?width=2192&height=2400");
+}
+
+
+/* =========================================================
+   OVERLAY
+   ========================================================= */
+
+.offre-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    background: linear-gradient(
+        90deg,
+        rgba(0, 0, 0, 0.72),
+        rgba(0, 0, 0, 0.25),
+        rgba(0, 0, 0, 0.05)
+    );
+
+    z-index: 1;
+}
+
+
+/* =========================================================
+   CONTENU
+   ========================================================= */
+
+.offre-content {
+    position: relative;
+
+    z-index: 2;
+
+    width: 85%;
+    max-width: 500px;
+
+    padding: 30px;
+
+    color: white;
+
+    text-align: left;
+}
+
+.offre-content h4 {
+    margin: 0;
+
+    font-size: clamp(
+        1.5rem,
+        4vw,
+        2.5rem
+    );
+
+    font-weight: 900;
+
+    line-height: 1.1;
+
+    text-transform: uppercase;
+}
+
+.offre-content p {
+    margin: 12px 0 25px;
+
+    font-size: clamp(
+        14px,
+        2vw,
+        18px
+    );
+
+    font-weight: 500;
+
+    line-height: 1.5;
+
+    opacity: 0.9;
+}
+
+
+/* =========================================================
+   PRIX
+   ========================================================= */
+
+.offre-price {
+    display: flex;
+
     align-items: center;
     justify-content: center;
-    padding: 20px; 
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    gap: 6px;
+
+    width: 140px;
+    height: 48px;
+
+    border: none;
+
+    border-radius: 50px;
+
+    background-color: white;
+
+    color: #222;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease;
 }
 
-.offre-2:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+.offre-price:hover {
+    background-color: #fc9e25;
+    color: white;
 }
 
+
+/* =========================================================
+   TABLETTE
+   ========================================================= */
 
 @media screen and (min-width: 768px) {
+
     .offers {
-        padding: 80px 20px; 
+        padding: 80px 6%;
     }
 
     .offre-cards {
-        flex-direction: row; 
-        flex-wrap: wrap; 
-        justify-content: center;
-        margin-top: 50px;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
     }
 
-    .offre-2 {
-        /* flex-grow: 0 (ne grandit pas trop),  */
-        flex: 0 1 250px; 
-        width: auto;
-        max-width: none;
+    .offre-card-small,
+    .offre-card-peanut {
+        min-height: 330px;
     }
+
+    .offre-card-large {
+        grid-column: span 2;
+        min-height: 450px;
+    }
+
+    .offre-content {
+        padding: 40px;
+    }
+}
+
+
+/* =========================================================
+   GRAND ÉCRAN
+   ========================================================= */
+
+@media screen and (min-width: 1024px) {
+
+    .offers {
+        padding: 100px 7%;
+    }
+
+    .offre-header {
+        margin-bottom: 60px;
+    }
+
+    .offre-cards {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 280px 280px;
+
+        gap: 25px;
+    }
+
+    .offre-card-small,
+    .offre-card-peanut {
+        min-height: 0;
+        height: 280px;
+    }
+
+    .offre-card-large {
+        grid-column: 2;
+        grid-row: 1 / span 2;
+
+        height: 585px;
+        min-height: 0;
+    }
+
+    .offre-content {
+        width: 80%;
+        padding: 40px;
+    }
+
+    .offre-content h4 {
+        font-size: 2.2rem;
+    }
+}
+
+
+/* =========================================================
+   TRÈS GRAND ÉCRAN
+   ========================================================= */
+
+@media screen and (min-width: 1400px) {
+
+    .offers {
+        padding-left: 8%;
+        padding-right: 8%;
+    }
+
+    .offre-card-small,
+    .offre-card-peanut {
+        height: 300px;
+    }
+
+    .offre-card-large {
+        height: 625px;
+    }
+
+    .offre-content {
+        padding: 50px;
+    }
+}
+
+
+/* =========================================================
+   ACCESSIBILITÉ
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .offre-card {
+        transition: none;
+    }
+
 }

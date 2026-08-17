@@ -1,83 +1,162 @@
+/* =========================================================
+   SECTION MENU
+   ========================================================= */
+
+.Nos-menu {
+    width: 100%;
+    overflow: hidden;
+}
 
 
+/* =========================================================
+   BOUTONS CATÉGORIES
+   ========================================================= */
 
 .categories-buttons {
     display: flex;
-    justify-content: flex-start; 
-    gap: 12px; 
+    justify-content: flex-start;
+
+    gap: 12px;
+
     margin: 20px 0;
-    padding: 10px 5%; 
-    
-    /* Permet de faire défiler les boutons au doigt sur mobile 
-       si la liste est trop longue pour l'écran */
+    padding: 10px 5%;
+
     overflow-x: auto;
     white-space: nowrap;
+
     -webkit-overflow-scrolling: touch;
-    scrollbar-width: none; /* Cache la barre sur Firefox */
+    scrollbar-width: none;
 }
 
-/* Cache la barre de défilement sur Chrome/Safari */
 .categories-buttons::-webkit-scrollbar {
     display: none;
 }
 
+
+/* =========================================================
+   BOUTON
+   ========================================================= */
+
 .btn-categorie {
-    padding: 10px 20px; 
+    padding: 10px 20px;
+
     border: 1px solid #e2b49a;
     border-radius: 25px;
+
     background: transparent;
+
+    color: #333;
+
     font-weight: 600;
-    cursor: pointer;
     font-size: 14px;
-    flex-shrink: 0; /* Empêche les boutons de s'écraser/réduire en largeur */
-    transition: all 0.3s ease;
+
+    cursor: pointer;
+
+    flex-shrink: 0;
+
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease,
+        border-color 0.3s ease;
 }
 
 
+/* Bouton actif */
 
-.btn-categorie:hover,
-.btn-categorie.active:hover { 
-    background: darkgoldenrod;
+.btn-categorie.active {
+    background-color: darkgoldenrod;
     color: white;
     border-color: darkgoldenrod;
 }
 
-/* LA GRILLE DES PLATS */
-.plats-grid {
-    display: grid;
-    gap: 25px; 
-    
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
-    padding: 20px 5%; 
+
+/* Hover */
+
+.btn-categorie:hover {
+    background-color: darkgoldenrod;
+    color: white;
+    border-color: darkgoldenrod;
 }
 
-/* LES CARTES DE PLATS */
+
+/* =========================================================
+   GRILLE DES PLATS
+   ========================================================= */
+
+.plats-grid {
+    display: grid;
+
+    gap: 25px;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(280px, 1fr));
+
+    padding: 20px 5%;
+}
+
+
+/*
+   Le wrapper motion créé autour de chaque Plats
+   doit pouvoir prendre toute la largeur.
+*/
+
+.plats-grid > div {
+    width: 100%;
+}
+
+
+/* =========================================================
+   CARTES
+   ========================================================= */
+
 .plat-card {
     border-radius: 20px;
+
     overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+
+    box-shadow:
+        0 4px 15px rgba(0, 0, 0, 0.05);
+
     background-color: #fff;
+
     width: 100%;
-    transition: transform 0.3s ease;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
 }
 
 
 .plat-card:hover {
     transform: translateY(-5px);
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.1);
 }
+
+
+/* =========================================================
+   IMAGE
+   ========================================================= */
 
 .plat-image-container {
     height: 180px;
     width: 100%;
-    overflow: hidden; 
+
+    overflow: hidden;
+
     cursor: pointer;
 }
+
 
 .plat-image {
     width: 100%;
     height: 100%;
+
     object-fit: cover;
-    transition: transform 0.5s ease; 
+
+    transition:
+        transform 0.5s ease;
 }
 
 
@@ -86,54 +165,84 @@
 }
 
 
+/* =========================================================
+   INFORMATIONS
+   ========================================================= */
+
 .plat-info-bande {
     background-color: darkgoldenrod;
+
     color: white;
+
     padding: 20px;
 }
 
+
 .plat-ligne-titre {
     display: flex;
+
     justify-content: space-between;
-    align-items: center; 
+    align-items: center;
+
     margin-bottom: 10px;
+
     gap: 10px;
 }
 
+
 .plat-titre {
     margin: 0;
+
     text-transform: uppercase;
-    font-size: clamp(1.1rem, 3vw, 1.3rem); 
+
+    font-size:
+        clamp(1.1rem, 3vw, 1.3rem);
+
     font-weight: 700;
 }
 
+
 .plat-description {
     margin: 0;
+
     font-size: 14px;
+
     line-height: 1.4;
+
     opacity: 0.95;
 }
 
 
+/* =========================================================
+   ORDINATEUR
+   ========================================================= */
 
 @media screen and (min-width: 1024px) {
+
     .categories-buttons {
-        justify-content: center; 
+        justify-content: center;
+
         padding: 0;
+
         margin: 30px 0;
-        overflow: visible; 
+
+        overflow: visible;
     }
+
 
     .btn-categorie {
-        padding: 10px 25px; 
+        padding: 10px 25px;
     }
 
+
     .plats-grid {
-        gap: 30px; 
-        padding: 40px 8%; 
+        gap: 30px;
+
+        padding: 40px 8%;
     }
-    
+
+
     .plat-image-container {
-        height: 200px; 
+        height: 200px;
     }
 }

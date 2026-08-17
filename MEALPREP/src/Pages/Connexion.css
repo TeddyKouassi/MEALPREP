@@ -1,97 +1,249 @@
-
+/* ================================
+   PAGE CONNEXION
+================================ */
 
 .connexion {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh; 
-    background-color: rgb(255, 255, 255);
-    padding: 20px; 
+    min-height: 100vh;
+    padding: 40px 20px;
+    background-color: #f9f7f2;
 }
 
-/*  POUR LA RESPONSIVITÉ */
+
+/* ================================
+   CONTENEUR
+================================ */
+
 .connexion-container {
-    width: 100%; 
-    max-width: 350px; 
-    padding: 30px 20px; 
+    width: 100%;
+    max-width: 400px;
+    padding: 35px 30px;
     border-radius: 20px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); 
-    background-color: #fff;
-    transition: background-color 0.3s ease;
-}
 
+    background-color: #ffffff;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
 
 .connexion-container:hover {
-    background-color: antiquewhite;
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
 }
+
+
+/* ================================
+   TITRE
+================================ */
 
 .connexion-container h2 {
     text-align: center;
-    margin-bottom: 25px;
-    font-weight: bold;
-    
-    font-size: clamp(1.5rem, 5vw, 1.8rem); 
+    margin: 0 0 10px;
+
+    font-size: clamp(1.6rem, 5vw, 2rem);
+    font-weight: 800;
+
     color: #222;
 }
+
+
+/* Texte sous le titre */
+
+.connexion-container > p {
+    text-align: center;
+    margin-bottom: 30px;
+
+    color: #666;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+
+/* ================================
+   FORMULAIRE
+================================ */
+
+.connexion-form {
+    width: 100%;
+}
+
+
+/* ================================
+   CHAMPS
+================================ */
 
 .input {
     display: flex;
     flex-direction: column;
+
     margin-bottom: 20px;
-    position: relative;
-    font-size: 15px; 
-    font-weight: bold;
+    gap: 8px;
+
     color: #333;
-    gap: 8px; 
+}
+
+.input label {
+    font-size: 14px;
+    font-weight: 600;
 }
 
 .input input {
-    padding: 12px; 
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    font-size: 16px; 
     width: 100%;
+
+    padding: 13px 14px;
+
+    border: 1px solid #d8d8d8;
+    border-radius: 10px;
+
+    background-color: #fff;
+
+    font-size: 15px;
+
     outline: none;
-    transition: border-color 0.2s ease;
+
+    transition:
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.input input::placeholder {
+    color: #aaa;
 }
 
 .input input:focus {
-    border-color: #27ae60; 
+    border-color: #27ae60;
+
+    box-shadow: 0 0 0 3px rgba(39, 174, 96, 0.12);
 }
+
+
+/* ================================
+   MESSAGE D'ERREUR
+================================ */
+
+.connexion-error {
+    color: #e63946;
+
+    background-color: #ffe5e5;
+
+    padding: 10px 12px;
+
+    border-radius: 8px;
+
+    margin-bottom: 15px;
+
+    font-size: 14px;
+
+    text-align: center;
+}
+
+
+/* ================================
+   BOUTON
+================================ */
 
 .btn-connexion {
     width: 100%;
-    cursor: pointer;
-    font-weight: bold;
-    font-size: 16px;
-    padding: 14px; 
+
+    padding: 14px;
+
     border: none;
-    color: #fff;
+    border-radius: 12px;
+
     background-color: #27ae60;
-    border-radius: 15px;
-    transition: background-color 0.3s ease, transform 0.1s ease;
+    color: white;
+
+    font-size: 16px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.3s ease,
+        transform 0.15s ease,
+        box-shadow 0.3s ease;
 }
 
 .btn-connexion:hover {
     background-color: #219150;
+
+    box-shadow: 0 6px 15px rgba(39, 174, 96, 0.25);
 }
 
 .btn-connexion:active {
-    transform: scale(0.98); 
+    transform: scale(0.98);
 }
+
+
+/* Bouton pendant le chargement */
+
+.btn-connexion:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+
+/* ================================
+   LIEN INSCRIPTION
+================================ */
 
 .lien {
     text-align: center;
-    margin-top: 15px;
+
+    margin-top: 20px;
+
     font-size: 14px;
+    color: #666;
 }
 
 .lien a {
-    text-decoration: none;
+    margin-left: 5px;
+
     color: #27ae60;
-    font-weight: 500;
+
+    font-weight: 600;
+
+    text-decoration: none;
+
+    transition: color 0.3s ease;
 }
 
 .lien a:hover {
+    color: #219150;
     text-decoration: underline;
+}
+
+
+/* ================================
+   MOBILE
+================================ */
+
+@media screen and (max-width: 480px) {
+
+    .connexion {
+        padding: 25px 15px;
+    }
+
+    .connexion-container {
+        padding: 30px 20px;
+        border-radius: 16px;
+    }
+
+    .connexion-container h2 {
+        font-size: 1.6rem;
+    }
+
+    .input input {
+        padding: 12px;
+    }
+
+    .btn-connexion {
+        padding: 13px;
+    }
 }

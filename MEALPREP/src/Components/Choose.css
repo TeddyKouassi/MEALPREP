@@ -1,4 +1,304 @@
+/* =========================================================
+   INTRODUCTION
+   ========================================================= */
 
-.card-container{
-    background-color: var(--token-42e30d61-c838-4909-bd19-2fba025eba78,#920711);
+.choose-intro {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+    text-align: center;
+
+    padding: 60px 5% 30px;
+}
+
+
+/* =========================================================
+   CATÉGORIE
+   ========================================================= */
+
+.choose-category {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    margin-bottom: 15px;
+}
+
+.choose-category p {
+    margin: 0;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    color: #444;
+}
+
+.choose-dot {
+    width: 12px;
+    height: 12px;
+
+    border-radius: 50%;
+
+    background-color: #d88b00;
+}
+
+
+/* =========================================================
+   TITRE
+   ========================================================= */
+
+.choose-title {
+    width: 100%;
+    max-width: 850px;
+
+    margin: 0 0 20px;
+
+    font-size: clamp(
+        2rem,
+        5vw,
+        3rem
+    );
+
+    font-weight: 900;
+
+    line-height: 1.15;
+
+    color: #222;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+   ========================================================= */
+
+.choose-description {
+    width: 100%;
+    max-width: 700px;
+
+    margin: 0;
+
+    font-size: clamp(
+        14px,
+        2vw,
+        17px
+    );
+
+    line-height: 1.6;
+
+    color: #666;
+}
+
+
+/* =========================================================
+   CONTENEUR DES CARTES
+   ========================================================= */
+
+.choose-card-container {
+    width: 100%;
+    max-width: 1400px;
+
+    margin: 0 auto;
+
+    padding: 30px 5% 80px;
+
+    display: grid;
+
+    grid-template-columns: 1fr;
+
+    gap: 25px;
+}
+
+
+/* =========================================================
+   CARTE
+   ========================================================= */
+
+.choose-card {
+    width: 100%;
+
+    overflow: hidden;
+
+    background-color: #fff;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 4px 12px rgba(0, 0, 0, 0.12);
+
+    transition:
+        box-shadow 0.3s ease;
+}
+
+.choose-card:hover {
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.18);
+}
+
+
+/* =========================================================
+   IMAGE
+   ========================================================= */
+
+.choose-image-wrapper {
+    width: 100%;
+
+    height: 240px;
+
+    overflow: hidden;
+}
+
+.choose-image-wrapper img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+
+/* =========================================================
+   CONTENU CARTE
+   ========================================================= */
+
+.choose-container {
+    padding: 20px;
+}
+
+.choose-container h4 {
+    margin: 0 0 8px;
+
+    font-size: 17px;
+
+    color: #222;
+}
+
+.choose-container p {
+    margin: 0;
+
+    font-size: 14px;
+
+    line-height: 1.5;
+
+    color: #666;
+}
+
+
+/* =========================================================
+   TABLETTE
+   ========================================================= */
+
+@media screen and (min-width: 600px) {
+
+    .choose-intro {
+        padding-left: 7%;
+        padding-right: 7%;
+    }
+
+    .choose-card-container {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        padding-left: 7%;
+        padding-right: 7%;
+
+        gap: 30px;
+    }
+
+    .choose-image-wrapper {
+        height: 260px;
+    }
+}
+
+
+/* =========================================================
+   ORDINATEUR
+   ========================================================= */
+
+@media screen and (min-width: 1024px) {
+
+    .choose-intro {
+        align-items: flex-start;
+
+        text-align: left;
+
+        padding:
+            90px 8%
+            40px;
+    }
+
+    .choose-category {
+        justify-content: flex-start;
+    }
+
+    .choose-title {
+        text-align: left;
+
+        max-width: 850px;
+    }
+
+    .choose-description {
+        max-width: 750px;
+
+        text-align: left;
+    }
+
+    .choose-card-container {
+        grid-template-columns:
+            repeat(4, minmax(0, 1fr));
+
+        gap: 25px;
+
+        padding:
+            40px 8%
+            90px;
+    }
+
+    .choose-image-wrapper {
+        height: 250px;
+    }
+}
+
+
+/* =========================================================
+   GRAND ÉCRAN
+   ========================================================= */
+
+@media screen and (min-width: 1400px) {
+
+    .choose-intro {
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+
+    .choose-card-container {
+        padding-left: 10%;
+        padding-right: 10%;
+
+        gap: 30px;
+    }
+
+    .choose-image-wrapper {
+        height: 280px;
+    }
+}
+
+
+/* =========================================================
+   ACCESSIBILITÉ
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .choose-card {
+        transition: none;
+    }
 }

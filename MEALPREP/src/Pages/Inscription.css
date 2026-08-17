@@ -1,79 +1,222 @@
-
-
 .inscription {
     display: flex;
-    flex-direction: column; 
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    gap: 30px; 
-    padding: 30px 5%; 
-    margin: 0 auto;
+    gap: 30px;
+
+    width: 100%;
     min-height: 100vh;
-    background-color: #fff;
+
+    padding: 40px 5%;
+
+    background-color: #f9f7f2;
 }
 
+
+/* =========================
+   IMAGE
+========================= */
 
 .inscription-image {
-    display: none; 
+    display: none;
 }
 
-
-.inscription-container {
+.inscription-image img {
     width: 100%;
-    max-width: 450px; 
-    padding: 20px 0;
+    height: 100%;
+
+    object-fit: cover;
+
+    border-radius: 25px;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
 }
 
+
+/* =========================
+   CONTENEUR FORMULAIRE
+========================= */
+
+.inscription1 {
+    width: 100%;
+    max-width: 500px;
+
+    padding: 30px;
+
+    background-color: white;
+
+    border-radius: 25px;
+
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+
+/* =========================
+   TITRE
+========================= */
+
+.form-inscription {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.form-inscription h2 {
+    margin-bottom: 10px;
+
+    color: #1b4332;
+
+    font-size: clamp(25px, 5vw, 34px);
+}
+
+.form-inscription p {
+    color: #777;
+
+    line-height: 1.5;
+
+    font-size: 14px;
+}
+
+
+/* =========================
+   FORMULAIRE
+========================= */
 
 .form-input {
-    display: grid;
-    gap: 15px;
-    margin-top: 20px;
     width: 100%;
 }
 
+.form-input form {
+    display: flex;
+    flex-direction: column;
 
-.form-input input,
-.form-input select {
-    padding: 12px; 
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    font-size: 16px; 
+    gap: 17px;
+}
+
+
+/* =========================
+   CHAMPS
+========================= */
+
+.group-input {
+    display: flex;
+    flex-direction: column;
+
+    gap: 7px;
+}
+
+.group-input label {
+    color: #333;
+
+    font-size: 14px;
+
+    font-weight: 600;
+}
+
+.group-input input,
+.group-input select {
     width: 100%;
+
+    padding: 13px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 10px;
+
+    background-color: white;
+
+    font-size: 15px;
+
     outline: none;
+
+    transition: 0.3s ease;
+}
+
+.group-input input:focus,
+.group-input select:focus {
+    border-color: #2e7d32;
+
+    box-shadow: 0 0 0 3px rgba(46, 125, 50, 0.08);
 }
 
 
+/* =========================
+   BOUTON
+========================= */
+
+.form-input form button {
+    width: 100%;
+
+    margin-top: 10px;
+
+    padding: 14px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background-color: #2e7d32;
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+.form-input form button:hover {
+    background-color: #1b5e20;
+
+    transform: translateY(-2px);
+}
+
+.form-input form button:active {
+    transform: scale(0.98);
+}
+
+
+/* =========================
+   DESKTOP
+========================= */
 
 @media screen and (min-width: 1024px) {
+
     .inscription {
-        flex-direction: row; 
-        justify-content: space-between;
-        align-items: center;
-        gap: 60px; 
-        padding: 40px 8%; 
-        max-width: 1200px; 
-    }
+        flex-direction: row;
 
-    
-    .inscription-image {
-        display: flex;
-        flex: 1;
         justify-content: center;
-        max-width: 50%; 
+
+        align-items: center;
+
+        gap: 70px;
+
+        max-width: 1300px;
+
+        margin: auto;
+
+        padding: 70px 6%;
     }
 
-    .inscription-image img {
-        width: 100%;
-        height: auto;
-        border-radius: 15px; 
-        object-fit: cover;
-        max-height: 600px; 
-        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05); 
-    }
 
-    .inscription-container {
+    .inscription-image {
+        display: block;
+
         flex: 1;
-        max-width: 450px;
+
+        max-width: 550px;
+
+        height: 650px;
+    }
+
+
+    .inscription1 {
+        flex: 1;
+
+        max-width: 500px;
+
+        padding: 40px;
     }
 }

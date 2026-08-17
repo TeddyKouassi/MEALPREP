@@ -1,67 +1,290 @@
-.create-plan{
-    max-width: 600px;
-    margin:50px auto;
-    padding:30px;
+.create-plan {
+    width: 100%;
+    max-width: 850px;
+    margin: 70px auto;
+    padding: 40px 25px;
     text-align: center;
-    border-radius: 10px;
 }
 
-.create-plan h1{
-    margin-bottom: 10px;
-    font-size: 32px;
+/* =========================
+   HEADER
+========================= */
+
+.plan-header {
+    margin-bottom: 40px;
 }
 
-.create-plan h2{
-    margin-bottom: 25px;
-    font-size:22px;
+.plan-label {
+    display: inline-block;
+    margin-bottom: 12px;
+    color: darkgoldenrod;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
 }
 
-.create-plan{
+.plan-header h1 {
+    margin-bottom: 12px;
+    font-size: clamp(28px, 5vw, 42px);
+    color: #1b4332;
+}
+
+.plan-header p {
+    max-width: 600px;
+    margin: auto;
     color: #666;
+    line-height: 1.6;
+}
+
+/* =========================
+   PROGRESSION
+========================= */
+
+.progress {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 500px;
+    margin: 0 auto 50px;
+}
+
+.progress span {
+    width: 35px;
+    height: 35px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #eee;
+    color: #777;
+
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+.progress span.active {
+    background: darkgoldenrod;
+    color: white;
+}
+
+.progress div {
+    width: 60px;
+    height: 2px;
+    background: #ddd;
+}
+
+/* =========================
+   ÉTAPE
+========================= */
+
+.plan-step {
+    padding: 40px 30px;
+
+    background: white;
+
+    border-radius: 25px;
+
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+.plan-step h2 {
+    margin-bottom: 10px;
+
+    color: #1b4332;
+
+    font-size: clamp(21px, 4vw, 28px);
+}
+
+.step-description {
+    margin-bottom: 30px;
+
+    color: #777;
+
+    line-height: 1.5;
+}
+
+/* =========================
+   CHOIX
+========================= */
+
+.choices {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 15px;
+
     margin-bottom: 35px;
 }
 
-.create-plan button{
-    padding: 12px 20px;
-    margin: 8px;
-    border: 1px solid #ddd;
-    border-radius: 6px;
+.choices button {
+    min-height: 60px;
+
+    padding: 15px;
+
+    border: 2px solid #e5e5e5;
+
+    border-radius: 12px;
+
     background: white;
-    cursor: pointer;
+
+    color: #333;
+
     font-size: 15px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
 }
 
-.create-plan button:hover{
-  background: darkgoldenrod;
-  font-weight: bold;
-  color: black;
-  border: none;
-  margin-top: 25px;
+.choices button:hover {
+    border-color: darkgoldenrod;
+
+    transform: translateY(-2px);
 }
 
+.choices button.selected {
+    background: darkgoldenrod;
 
+    border-color: darkgoldenrod;
 
-@media (max-width:600px){
-    .create-plan{
-        margin:30px 15px;
-        padding:20px 15px;
+    color: white;
+}
+
+/* =========================
+   BOUTONS NAVIGATION
+========================= */
+
+.navigation-buttons {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 15px;
+}
+
+.continue-btn,
+.generate-btn,
+.back-btn {
+    padding: 13px 25px;
+
+    border-radius: 10px;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+.continue-btn,
+.generate-btn {
+    border: none;
+
+    background: #1b4332;
+
+    color: white;
+}
+
+.continue-btn:hover,
+.generate-btn:hover {
+    background: #143326;
+
+    transform: translateY(-2px);
+}
+
+.back-btn {
+    border: 1px solid #ddd;
+
+    background: white;
+
+    color: #555;
+}
+
+.back-btn:hover {
+    background: #f5f5f5;
+}
+
+/* Bouton désactivé */
+
+.continue-btn:disabled,
+.generate-btn:disabled {
+    opacity: 0.5;
+
+    cursor: not-allowed;
+
+    transform: none;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media screen and (max-width: 600px) {
+
+    .create-plan {
+        margin: 35px auto;
+
+        padding: 20px 15px;
     }
 
-    .create-plan h1{
-        font-size: 26px;
+    .plan-header {
+        margin-bottom: 30px;
     }
 
-    .create-plan p{
+    .plan-header h1 {
+        font-size: 27px;
+    }
+
+    .plan-header p {
         font-size: 14px;
-        margin-bottom: 25px;
     }
 
-    .create-plan h2{
-        font-size: 19px;
+    .progress {
+        margin-bottom: 30px;
     }
 
-    .create-plan button{
-        width: 100px;
-        margin: 6px 0;
+    .progress span {
+        width: 30px;
+        height: 30px;
+
+        font-size: 13px;
+    }
+
+    .progress div {
+        width: 30px;
+    }
+
+    .plan-step {
+        padding: 30px 18px;
+
+        border-radius: 18px;
+    }
+
+    .choices {
+        grid-template-columns: 1fr;
+
+        gap: 10px;
+    }
+
+    .choices button {
+        width: 100%;
+    }
+
+    .navigation-buttons {
+        flex-direction: column;
+    }
+
+    .continue-btn,
+    .generate-btn,
+    .back-btn {
+        width: 100%;
     }
 }

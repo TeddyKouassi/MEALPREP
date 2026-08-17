@@ -1,42 +1,121 @@
-
+/* =========================================================
+   MENU SECTION
+   ========================================================= */
 
 .menu-section {
     display: flex;
-    flex-direction: column; 
-    gap: 20px; 
-    padding: 20px 5%; 
+    flex-direction: column;
+    gap: 30px;
+
+    padding: 40px 5%;
+
+    width: 100%;
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   TEXTE
+   ========================================================= */
+
+.menu-section-container {
     width: 100%;
 }
+
+.menu-section-container h1 {
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 800;
+
+    color: #222;
+
+    line-height: 1.15;
+
+    margin-bottom: 20px;
+}
+
+.menu-section-container p {
+    font-size: 15px;
+    line-height: 1.7;
+
+    color: #666;
+
+    max-width: 600px;
+}
+
+
+/* =========================================================
+   IMAGE
+   ========================================================= */
 
 .container-image {
     display: flex;
-    flex-direction: column; 
-    gap: 15px;
+
     width: 100%;
+
+    overflow: hidden;
+
+    border-radius: 20px;
 }
 
-/* ici j'ai procédé comme ça pour protéger mes images */
 .container-image img {
+    display: block;
+
     width: 100%;
     height: auto;
-    max-height: 400px; /* Évite que l'image ne devienne trop géante sur mobile */
-    object-fit: cover; /* Coupe proprement l'image sans la déformer */
-    border-radius: 15px; 
+
+    max-height: 450px;
+
+    object-fit: cover;
+
+    border-radius: 20px;
+
+    cursor: pointer;
 }
 
 
-@media screen and (min-width: 1024px) {
+/* =========================================================
+   TABLETTE
+   ========================================================= */
+
+@media screen and (min-width: 768px) {
+
     .menu-section {
-        flex-direction: row; 
-        justify-content: space-between; 
-        align-items: center; 
-        padding: 60px 8%; 
-        gap: 50px; 
+        padding: 50px 7%;
+        gap: 40px;
+    }
+
+    .menu-section-container p {
+        font-size: 16px;
+    }
+}
+
+
+/* =========================================================
+   ORDINATEUR
+   ========================================================= */
+
+@media screen and (min-width: 1024px) {
+
+    .menu-section {
+        flex-direction: row;
+
+        justify-content: space-between;
+        align-items: center;
+
+        padding: 80px 8%;
+
+        gap: 60px;
+    }
+
+    .menu-section-container {
+        width: 48%;
     }
 
     .container-image {
-        flex-direction: row; /* pour que les images se mettent côte à côte */
-        justify-content: space-between;
-        width: 50%; 
+        width: 48%;
+    }
+
+    .container-image img {
+        max-height: 500px;
     }
 }

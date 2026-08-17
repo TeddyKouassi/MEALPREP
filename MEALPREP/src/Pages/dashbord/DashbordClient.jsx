@@ -1,4 +1,4 @@
-function Dashbord(){
+function DashbordClient(){
     return(
         <>
         <div className="dashbord-client">
@@ -49,4 +49,4 @@ function Dashbord(){
 
     )
 }
-export default Dashbord;
+export default DashbordClient;

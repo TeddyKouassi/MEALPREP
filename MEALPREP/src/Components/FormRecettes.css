@@ -1,0 +1,232 @@
+/* =========================================================
+   FORMULAIRE RECETTES
+   ========================================================= */
+
+.form-recette {
+    width: 100%;
+    max-width: 900px;
+    margin: 80px auto;
+    padding: 40px 20px;
+}
+
+/* =========================
+   HEADER
+   ========================= */
+
+.form-recette-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.form-label {
+    display: inline-block;
+    color: #e63946;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.form-recette-header h2 {
+    font-size: clamp(2rem, 5vw, 2.8rem);
+    font-weight: 800;
+    color: #222;
+    margin: 10px 0;
+    line-height: 1.2;
+}
+
+.form-recette-header p {
+    color: #666;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+
+/* =========================
+   FORMULAIRE
+   ========================= */
+
+.form-recette form {
+    background-color: #ffffff;
+    padding: 35px;
+    border-radius: 25px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+/* =========================
+   GROUPES
+   ========================= */
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label {
+    font-size: 14px;
+    font-weight: 700;
+    color: #333;
+}
+
+
+/* =========================
+   INPUT / SELECT / TEXTAREA
+   ========================= */
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    border: 1px solid #ddd;
+    background-color: #fafafa;
+    border-radius: 12px;
+    padding: 13px 15px;
+
+    font-family: inherit;
+    font-size: 14px;
+    color: #333;
+
+    outline: none;
+
+    transition:
+        border-color 0.3s ease,
+        box-shadow 0.3s ease,
+        background-color 0.3s ease;
+}
+
+
+/* Focus */
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #fc9e25;
+    background-color: #fff;
+
+    box-shadow: 0 0 0 3px rgba(252, 158, 37, 0.12);
+}
+
+
+/* =========================
+   INPUT FICHIER
+   ========================= */
+
+.form-group input[type="file"] {
+    padding: 10px;
+    cursor: pointer;
+}
+
+
+/* =========================
+   TEXTAREA
+   ========================= */
+
+.form-group textarea {
+    min-height: 130px;
+    resize: vertical;
+    line-height: 1.6;
+}
+
+
+/* =========================
+   DEUX CHAMPS SUR UNE LIGNE
+   ========================= */
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+
+/* =========================
+   BOUTON
+   ========================= */
+
+.form-recette form button {
+    width: 100%;
+    border: none;
+    border-radius: 50px;
+
+    padding: 15px 25px;
+
+    background-color: #fc9e25;
+    color: #fff;
+
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    margin-top: 10px;
+
+    transition:
+        background-color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.form-recette form button:hover {
+    background-color: #e88b16;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media screen and (max-width: 600px) {
+
+    .form-recette {
+        margin: 50px auto;
+        padding: 30px 15px;
+    }
+
+    .form-recette-header {
+        margin-bottom: 30px;
+    }
+
+    .form-recette form {
+        padding: 25px 18px;
+        border-radius: 20px;
+        gap: 18px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        font-size: 14px;
+    }
+
+    .form-group textarea {
+        min-height: 120px;
+    }
+}
+
+
+/* =========================================================
+   TABLETTE / ORDINATEUR
+   ========================================================= */
+
+@media screen and (min-width: 768px) {
+
+    .form-recette {
+        padding: 60px 20px;
+    }
+
+    .form-recette form {
+        padding: 45px;
+    }
+}

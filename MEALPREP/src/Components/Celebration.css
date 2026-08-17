@@ -1,76 +1,350 @@
-/* ==========================================================================
-   1. LE PARENT : LA GRILLE (À ajouter autour de vos cartes)
-   ========================================================================== */
-.grid-celeb {
-    display: grid;
-    /* Crée automatiquement autant de colonnes de 280px minimum que possible */
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px; /* Espace entre les cartes */
-    padding: 20px 5%; /* Marge sur les côtés */
-}
+/* =========================================================
+   INTRODUCTION
+   ========================================================= */
 
-/* ==========================================================================
-   2. STYLE DE LA CARTE (Mobile & PC)
-   ========================================================================== */
-.card-celeb { 
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    position: relative;
-    border-radius: 20px;
-    overflow: hidden;
-    width: 100%; /* S'adapte à la taille de la colonne de la grille */
-    transition: transform 0.3s ease;
-} 
-
-/* Effet au survol (optionnel mais sympa sur PC) */
-.card-celeb:hover {
-    transform: translateY(-5px);
-}
-
-.card-celeb img {
-    display: block;
+.celebration-intro {
     width: 100%;
-    height: 350px; /* Force une hauteur identique pour toutes vos images */
-    object-fit: cover; /* Coupe l'image proprement sans la déformer */
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+    text-align: center;
+
+    padding: 60px 5% 30px;
 }
 
-/* Conteneur de texte superposé en bas */
+
+/* =========================================================
+   CATÉGORIE
+   ========================================================= */
+
+.celebration-category {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    margin-bottom: 15px;
+}
+
+.celebration-category p {
+    margin: 0;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    color: #444;
+}
+
+.celebration-dot {
+    width: 12px;
+    height: 12px;
+
+    border-radius: 50%;
+
+    background-color: #d88b00;
+}
+
+
+/* =========================================================
+   TITRE
+   ========================================================= */
+
+.celebration-title {
+    width: 100%;
+    max-width: 850px;
+
+    margin: 0 0 20px;
+
+    font-size: clamp(
+        2rem,
+        5vw,
+        3rem
+    );
+
+    font-weight: 900;
+
+    line-height: 1.15;
+
+    color: #222;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+   ========================================================= */
+
+.celebration-description {
+    width: 100%;
+    max-width: 720px;
+
+    margin: 0;
+
+    font-size: clamp(
+        14px,
+        2vw,
+        17px
+    );
+
+    line-height: 1.6;
+
+    color: #666;
+}
+
+
+/* =========================================================
+   GRILLE
+   ========================================================= */
+
+.celebration-grid {
+    width: 100%;
+
+    max-width: 1400px;
+
+    margin: 0 auto;
+
+    padding: 30px 5% 80px;
+
+    display: grid;
+
+    grid-template-columns: 1fr;
+
+    gap: 25px;
+}
+
+
+/* =========================================================
+   CARTE
+   ========================================================= */
+
+.card-celeb {
+    position: relative;
+
+    width: 100%;
+
+    overflow: hidden;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 5px 15px rgba(0, 0, 0, 0.15);
+
+    background-color: #111;
+}
+
+
+/* =========================================================
+   IMAGE
+   ========================================================= */
+
+.celebration-image {
+    width: 100%;
+
+    height: 380px;
+
+    overflow: hidden;
+}
+
+.celebration-image img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+
+/* =========================================================
+   BADGE
+   ========================================================= */
+
+.dishes-tag {
+    position: absolute;
+
+    top: 20px;
+    left: 0;
+
+    padding: 10px 22px;
+
+    background-color: white;
+
+    color: #222;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.5px;
+
+    border-radius:
+        0 30px 30px 0;
+
+    z-index: 2;
+}
+
+
+/* =========================================================
+   CONTENU EN BAS DE L'IMAGE
+   ========================================================= */
+
 .container-celeb {
     position: absolute;
+
     right: 0;
     bottom: 0;
     left: 0;
+
+    padding: 70px 20px 20px;
+
+    text-align: left;
+
     color: white;
-    text-align: center;
-    padding: 20px 15px;
-    /* Dégradé sombre pour rendre le texte blanc toujours lisible sur l'image */
-    background: linear-gradient(transparent, rgba(0, 0, 0, 0.8)); 
+
+    background:
+        linear-gradient(
+            transparent,
+            rgba(0, 0, 0, 0.85)
+        );
 }
 
-/* Le Badge (ex: "Entrée", "Plat") */
-.dishes-tag {
-    position: absolute;
-    top: 20px;
-    left: 0;
-    background: #fff;
-    color: black;
-    /* Tailles légèrement réduites pour s'adapter aussi aux petits écrans */
-    padding: 10px 25px; 
+.container-celeb h4 {
+    margin: 0 0 6px;
+
+    font-size: 20px;
+}
+
+.container-celeb p {
+    margin: 0;
+
     font-size: 14px;
-    font-weight: 600;
-    border-radius: 0 40px 40px 0;
+
+    opacity: 0.9;
 }
 
-/* ==========================================================================
-   3. AJUSTEMENTS POUR GRANDS ÉCRANS (Media Query)
-   ========================================================================== */
+
+/* =========================================================
+   TABLETTE
+   ========================================================= */
+
+@media screen and (min-width: 600px) {
+
+    .celebration-intro {
+        padding-left: 7%;
+        padding-right: 7%;
+    }
+
+    .celebration-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        padding-left: 7%;
+        padding-right: 7%;
+
+        gap: 30px;
+    }
+
+    .celebration-grid
+    .card-celeb:last-child {
+        grid-column: 1 / -1;
+    }
+}
+
+
+/* =========================================================
+   ORDINATEUR
+   ========================================================= */
+
 @media screen and (min-width: 1024px) {
-    .grid-celeb {
-        padding: 40px 8%; /* Plus d'espace sur les côtés sur ordinateur */
-        gap: 40px; /* Plus d'espace entre les cartes */
+
+    .celebration-intro {
+        align-items: flex-start;
+
+        text-align: left;
+
+        padding:
+            90px 8%
+            40px;
+    }
+
+    .celebration-category {
+        justify-content: flex-start;
+    }
+
+    .celebration-title {
+        text-align: left;
+    }
+
+    .celebration-description {
+        text-align: left;
+
+        max-width: 750px;
+    }
+
+    .celebration-grid {
+        grid-template-columns:
+            repeat(3, minmax(0, 1fr));
+
+        padding:
+            40px 8%
+            100px;
+
+        gap: 30px;
+    }
+
+    .celebration-grid
+    .card-celeb:last-child {
+        grid-column: auto;
+    }
+
+    .celebration-image {
+        height: 450px;
     }
 
     .dishes-tag {
-        padding: 14px 35px; /* On remet vos tailles d'origine sur grand écran */
-        font-size: 16px;
+        padding: 12px 30px;
+
+        font-size: 14px;
+    }
+}
+
+
+/* =========================================================
+   GRAND ÉCRAN
+   ========================================================= */
+
+@media screen and (min-width: 1400px) {
+
+    .celebration-intro {
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+
+    .celebration-grid {
+        padding-left: 10%;
+        padding-right: 10%;
+
+        gap: 35px;
+    }
+
+    .celebration-image {
+        height: 500px;
+    }
+}
+
+
+/* =========================================================
+   ACCESSIBILITÉ
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .card-celeb {
+        transition: none;
     }
 }

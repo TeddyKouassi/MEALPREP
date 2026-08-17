@@ -1,29 +1,120 @@
-.about-video {
-    width: 90%;          
-    max-width: 1200px;   
-    margin: 80px auto;   
-    border-radius: 12px; 
-    overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    height: auto; 
-    
+/* =========================================================
+   VIDÉO
+   ========================================================= */
 
+.about-video {
+    width: 90%;
+    max-width: 1200px;
+
+    margin: 60px auto;
+
+    border-radius: 15px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.12);
+
+    position: relative;
+
+    background-color: #000;
 }
+
+
+/* =========================================================
+   VIDÉO
+   ========================================================= */
 
 .about-video video {
-    display: block; 
+    display: block;
+
     width: 100%;
     height: auto;
+
+    aspect-ratio: 16 / 9;
+
     object-fit: cover;
+
+    transform-origin: center;
+
+    transition: transform 0.5s ease;
 }
 
-@media screen and (min-width: 1024px) {
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media screen and (max-width: 599px) {
+
     .about-video {
-        width: 85%;       
-        margin: 120px auto; 
-        border-radius: 20px; 
-        height: auto; 
-        
-        
+        width: 92%;
+
+        margin: 45px auto;
+
+        border-radius: 12px;
+    }
+
+    .about-video video {
+        aspect-ratio: 16 / 9;
+    }
+}
+
+
+/* =========================================================
+   TABLETTE
+   ========================================================= */
+
+@media screen and (min-width: 600px) {
+
+    .about-video {
+        width: 88%;
+
+        margin: 70px auto;
+
+        border-radius: 16px;
+    }
+}
+
+
+/* =========================================================
+   ORDINATEUR
+   ========================================================= */
+
+@media screen and (min-width: 1024px) {
+
+    .about-video {
+        width: 85%;
+
+        margin: 100px auto;
+
+        border-radius: 20px;
+    }
+}
+
+
+/* =========================================================
+   GRAND ÉCRAN
+   ========================================================= */
+
+@media screen and (min-width: 1400px) {
+
+    .about-video {
+        max-width: 1300px;
+
+        margin-top: 120px;
+        margin-bottom: 120px;
+    }
+}
+
+
+/* =========================================================
+   ACCESSIBILITÉ
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .about-video video {
+        transition: none;
     }
 }

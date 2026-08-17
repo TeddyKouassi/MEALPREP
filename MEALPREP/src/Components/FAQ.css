@@ -1,110 +1,162 @@
-/* ==========================================================================
-   1. STYLE MOBILE (Par défaut : compact et centré)
-   ========================================================================== */
+/* =========================================================
+   FAQ
+========================================================= */
 
 .faq {
     width: 100%;
-    max-width: 650px; /* Élargi légèrement pour un meilleur confort de lecture */
-    padding: 20px 5%; /* Marges internes adaptées aux petits écrans */
-    margin: 20px auto; /* Moins d'espace vertical sur mobile */
-    font-family: Arial, sans-serif; /* Correction : ajout de la virgule */
+    max-width: 750px;
+    padding: 50px 20px;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
 }
+
+/* Petit titre FAQ */
 
 .section-label {
     font-weight: bold;
     color: #ff4757;
-    font-size: 13px; /* Un poil plus petit sur mobile */
+    font-size: 13px;
     letter-spacing: 1px;
     margin-bottom: 8px;
     text-transform: uppercase;
 }
 
+/* Grand titre */
+
 .section-title {
-     color: #2f3542;
-     /* Taille fluide : s'adapte parfaitement entre mobile et PC */
-     font-size: clamp(1.4rem, 5vw, 1.8rem); 
-     margin-bottom: 16px;
+    color: #2f3542;
+    font-size: clamp(1.8rem, 5vw, 2.5rem);
+    margin: 0 0 25px;
+    line-height: 1.2;
 }
+
+/* Liste */
+
+.faq-list {
+    width: 100%;
+}
+
+/* Question */
 
 .faq-item {
     background-color: #f1f2f6;
-    border-radius: 8px;
+    border-radius: 10px;
     overflow: hidden;
-    margin-bottom: 12px;
-    transition: background-color 0.3s ease;
+    margin-bottom: 14px;
+    transition: background-color 0.3s ease,
+                transform 0.3s ease;
 }
 
-/* Correction : suppression de l'espace pour cibler le conteneur lui-même */
 .faq-item:hover {
     background-color: #e4e7eb;
+    transform: translateY(-2px);
 }
+
+/* Barre de question */
 
 .faq-question {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 16px;
-    font-weight: 600; /* Correction : pas de 'px' pour le font-weight */
+    gap: 20px;
+
+    padding: 18px 20px;
+
+    font-weight: 600;
     cursor: pointer;
-    font-size: 15px; /* Taille confortable pour le pouce sur mobile */
+
+    font-size: 15px;
+    line-height: 1.4;
+
     color: #2f3542;
-    user-select: none; /* Évite de sélectionner le texte en cliquant vite */
+
+    user-select: none;
 }
 
-/* Correction structurelle : On place le "+" sur la question, pas la réponse */
+/* Bouton + */
+
 .faq-question::after {
     content: "+";
-    font-size: 22px;
+
+    flex-shrink: 0;
+
+    font-size: 24px;
+    font-weight: 400;
+
     color: #ff4757;
+
     transition: transform 0.3s ease;
-    line-height: 1;
 }
 
-/* Si la question ou le parent (faq-item) a la classe .open ou .active en React */
-.faq-item.open .faq-question::after {
-    transform: rotate(45deg); /* Le "+" tourne et devient une croix "x" pour fermer */
+/* Quand le détail est ouvert */
+
+.faq-item[open] .faq-question::after {
+    transform: rotate(45deg);
 }
+
+/* Réponse */
 
 .faq-answer {
     color: #57606f;
-    font-size: 14px; /* Un chouïa plus petit sur mobile pour la hiérarchie */
-    padding: 0 16px 16px 16px;
-    line-height: 1.5;
-    animation: fadeIn 0.4s ease-in-out;
+
+    font-size: 14px;
+    line-height: 1.6;
+
+    padding: 0 20px 20px;
 }
 
-/* ==========================================================================
-   2. ADAPTATION ORDINATEUR (Écrans supérieurs à 1024px)
-   ========================================================================== */
-@media screen and (min-width: 1024px) {
+/* =========================================================
+   TABLETTE
+========================================================= */
+
+@media screen and (min-width: 768px) {
+
     .faq {
-        padding: 20px; /* On retire le pourcentage inutile sur grand écran */
-        margin: 40px auto; /* On remet vos marges d'origine */
+        padding: 70px 30px;
+    }
+
+    .faq-question {
+        font-size: 16px;
+        padding: 20px 24px;
+    }
+
+    .faq-answer {
+        font-size: 15px;
+        padding: 0 24px 22px;
+    }
+}
+
+/* =========================================================
+   ORDINATEUR
+========================================================= */
+
+@media screen and (min-width: 1024px) {
+
+    .faq {
+        max-width: 800px;
+        padding: 90px 20px;
     }
 
     .section-label {
         font-size: 14px;
     }
 
+    .section-title {
+        font-size: 2.4rem;
+        margin-bottom: 35px;
+    }
+
+    .faq-item {
+        margin-bottom: 16px;
+    }
+
     .faq-question {
-        font-size: 16px; /* Taille d'origine pour PC */
+        font-size: 17px;
+        padding: 22px 25px;
     }
 
     .faq-answer {
-        font-size: 15px; /* Taille d'origine pour PC */
-    }
-}
-
-/* ==========================================================================
-   3. ANIMATION
-   ========================================================================== */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(-8px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
+        font-size: 15px;
+        padding: 0 25px 24px;
     }
 }

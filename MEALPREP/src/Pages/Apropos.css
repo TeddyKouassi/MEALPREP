@@ -1,193 +1,394 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap');
-
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+/* =========================================================
+   RESET
+========================================================= */
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+body {
+    background-color: #f9f7f2;
     font-family: "Montserrat", sans-serif;
 }
 
-
-
-
-body{
-background-color: #f9f7f2;
-}
-
-.apropos{
+.apropos {
     width: 100%;
     overflow: hidden;
 }
 
-/* pour la section about-hero*/
-.apropos-hero{
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.apropos-hero {
     width: 100%;
+    max-width: 1200px;
+
+    margin: 0 auto;
+    padding: 50px 20px;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1200px;
-    margin: 30px;
+
+    gap: 50px;
 }
 
-.apropos-hero-content{
+
+/* =========================================================
+   CONTENU
+========================================================= */
+
+.apropos-hero-content {
     width: 55%;
 }
 
-.apropos-hero-image{
-    width: 38%;
+.apropos-hero-content h1 {
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    line-height: 1.15;
+
+    color: #1b4332;
+
+    margin-bottom: 25px;
+
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 700;
 }
 
-.apropos-hero-image img{
+.apropos-hero-content p {
+    font-size: 16px;
+    line-height: 1.8;
+
+    color: #444;
+}
+
+.apropos-hero-content strong {
+    color: #1b4332;
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   IMAGE
+========================================================= */
+
+.apropos-hero-image {
+    width: 40%;
+}
+
+.apropos-hero-image img {
+    display: block;
+
     width: 100%;
     height: auto;
+
     border-radius: 25px;
-    box-shadow: 0 10px 30px  rgb(0,0,0.08);
-    transition: O.5s ease;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+
     cursor: pointer;
+
+    transition: transform 0.5s ease;
 }
 
-.apropos-hero-image img:hover{
-    transform: translateY(-15px);
+.apropos-hero-image img:hover {
+    transform: translateY(-10px);
 }
 
 
-/* pour la section about-story*/
-.apropos-mission{
+/* =========================================================
+   STORY
+========================================================= */
+
+.apropos-story {
     padding: 70px 20px;
 }
 
-.apropos-mission-content{
+.apropos-story-content {
     max-width: 900px;
+    margin: auto;
+
     text-align: center;
-    
 }
 
 .apropos-story h2,
 .apropos-mission h2,
 .apropos-values h2 {
-  font-size: 32px;
-  color: #1b4332;
-  margin-bottom: 20px;
-  transition: 0.5s;
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+
+    color: #1b4332;
+
+    margin-bottom: 20px;
 }
 
-/* pour la section about-mission*/
-.apropos-story{
-    padding: 70px 20px;
-}
-
-.apropos-story-content{
-    max-width: 900px;
-    margin: auto;
-    text-align: center;
-}
-
-.apropos-story p{
+.apropos-story p {
     margin-bottom: 15px;
+
     line-height: 1.8;
-    font-size: 18px;
-    
+
+    font-size: 17px;
 }
 
-.apropos-mission{
-    padding: 70px 20px;
-    
 
-}
+/* =========================================================
+   MISSION
+========================================================= */
 
-.apropos-mission-content{
-    max-width: 1100px;
-    margin:auto;
-    text-align: center;
-}
-
-.apropos-mission-cards{
-    display: flex;
-    gap: 45px;
-    margin-top: 40px;
-    flex-wrap: wrap;
-}
-
-.apropos-mission-card{
-    width: 280px;
-    padding: 25px;
-    border-radius: 25px;
-    background: white;
-    box-shadow: 0 5px 10px rgb(from rgb(123, 122, 122) r g b);
-}
-
-/* concernant les valeurs, nous avons*/
-
-.apropos-values{
+.apropos-mission {
     padding: 70px 20px;
 }
 
-.apropos-values-content{
+.apropos-mission-content {
     max-width: 1100px;
     margin: auto;
+
     text-align: center;
 }
 
-.apropos-values-cards{
+.apropos-mission-cards {
     display: flex;
-    gap: 25px;
-    margin-top: 40px;
-    flex-wrap: wrap;
+
     justify-content: center;
+    align-items: stretch;
+
+    gap: 30px;
+
+    margin-top: 40px;
+
+    flex-wrap: wrap;
 }
 
-.apropos-values-card{
-    width: 250px;
-    border-radius: 15px;
+.apropos-mission-card {
+    width: 280px;
+
     padding: 25px;
-    background-color: var(--token-f5cebdf7-3c22-4a65-b9b7-36529fcfdc15, rgb(255, 234, 190));
-    cursor: pointer;
-    transition: 0.5s ease;
+
+    border-radius: 25px;
+
+    background: white;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
 }
 
-.apropos-values-card :hover{
-    font-weight: bold;
+.apropos-mission-card:hover {
+    transform: translateY(-7px);
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
 }
 
-/*pour mon bOUtton cta*/
-.apropos-cta{
+
+/* =========================================================
+   VALEURS
+========================================================= */
+
+.apropos-values {
     padding: 70px 20px;
+}
+
+.apropos-values-content {
+    max-width: 1100px;
+
+    margin: auto;
+
     text-align: center;
+}
+
+.apropos-values-cards {
+    display: flex;
+
+    justify-content: center;
+    align-items: stretch;
+
+    gap: 25px;
+
+    margin-top: 40px;
+
+    flex-wrap: wrap;
+}
+
+.apropos-values-card {
+    width: 250px;
+
+    padding: 25px;
+
+    border-radius: 15px;
+
+    background-color: rgb(255, 234, 190);
+
+    cursor: pointer;
+
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+.apropos-values-card:hover {
+    transform: translateY(-7px);
+
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+}
+
+
+/* =========================================================
+   CTA
+========================================================= */
+
+.apropos-cta {
+    padding: 70px 20px;
+
+    text-align: center;
+
     background-color: #1b4332;
+
     color: white;
 }
 
 .apropos-cta-content {
-  max-width: 800px;
-  margin: auto;
+    max-width: 800px;
+
+    margin: auto;
 }
 
 .apropos-cta h2 {
-  font-size: 35px;
-  margin-bottom: 20px;
+    font-size: clamp(2rem, 5vw, 2.8rem);
+
+    margin-bottom: 20px;
 }
 
 .apropos-cta p {
-  line-height: 1.6;
-  margin-bottom: 30px;
+    line-height: 1.6;
+
+    margin-bottom: 30px;
 }
 
 .apropos-cta-buttons {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
+    display: flex;
+
+    justify-content: center;
+
+    gap: 20px;
+
+    flex-wrap: wrap;
 }
 
 
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media screen and (max-width: 767px) {
+
+    .apropos-hero {
+        flex-direction: column;
+
+        padding: 40px 20px;
+
+        gap: 35px;
+
+        align-items: stretch;
+    }
+
+    .apropos-hero-content {
+        width: 100%;
+    }
+
+    .apropos-hero-content h1 {
+        text-align: center;
+
+        font-size: 2.2rem;
+    }
+
+    .apropos-hero-content p {
+        font-size: 15px;
+
+        line-height: 1.7;
+
+        text-align: left;
+    }
+
+    .apropos-hero-image {
+        width: 100%;
+    }
+
+    .apropos-hero-image img {
+        border-radius: 20px;
+    }
+
+    .apropos-story,
+    .apropos-mission,
+    .apropos-values {
+        padding: 50px 20px;
+    }
+
+    .apropos-mission-card,
+    .apropos-values-card {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .apropos-cta-buttons {
+        flex-direction: column;
+
+        align-items: center;
+    }
+}
 
 
+/* =========================================================
+   TABLETTE
+========================================================= */
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+
+    .apropos-hero {
+        padding: 60px 40px;
+
+        gap: 35px;
+    }
+
+    .apropos-hero-content {
+        width: 55%;
+    }
+
+    .apropos-hero-image {
+        width: 42%;
+    }
+
+    .apropos-hero-content p {
+        font-size: 15px;
+
+        line-height: 1.7;
+    }
+}
 
 
+/* =========================================================
+   GRAND ÉCRAN
+========================================================= */
 
+@media screen and (min-width: 1024px) {
 
+    .apropos-hero {
+        padding: 80px 30px;
+    }
 
+    .apropos-hero-content p {
+        font-size: 16px;
+    }
 
-
-
+    .apropos-story,
+    .apropos-mission,
+    .apropos-values {
+        padding: 90px 20px;
+    }
+}
