@@ -9,17 +9,16 @@ function AboutStory() {
       viewport={{ once: true, amount: 0.2 }}
       transition={{
         duration: 0.8,
-        ease: "easeOut"
+        ease: "easeOut",
       }}
     >
       <div className="apropos-story-content">
-
         <motion.h2
           initial={{ opacity: 0, y: 25 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{
-            duration: 0.6
+            duration: 0.6,
           }}
         >
           Notre histoire
@@ -31,7 +30,7 @@ function AboutStory() {
           viewport={{ once: true }}
           transition={{
             duration: 0.6,
-            delay: 0.15
+            delay: 0.15,
           }}
         >
           Meal Prep est né d'une idée simple : rendre l'alimentation saine
@@ -46,14 +45,13 @@ function AboutStory() {
           viewport={{ once: true }}
           transition={{
             duration: 0.6,
-            delay: 0.3
+            delay: 0.3,
           }}
         >
           Notre plateforme vous aide à organiser vos repas, découvrir de
           nouvelles recettes et gagner du temps au quotidien grâce à une
           expérience simple, pratique et personnalisée.
         </motion.p>
-
       </div>
     </motion.section>
   );

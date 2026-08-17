@@ -39,7 +39,7 @@ function CreatePlan() {
           </p>
         </div>
 
-        {/* PROGRESSION */}
+      
 
         <div className="progress">
           <span className={step >= 1 ? "active" : ""}>1</span>
@@ -51,7 +51,7 @@ function CreatePlan() {
           <span className={step >= 4 ? "active" : ""}>4</span>
         </div>
 
-        {/* ÉTAPE 1 */}
+        
 
         {step === 1 && (
           <section className="plan-step">
@@ -105,7 +105,7 @@ function CreatePlan() {
           </section>
         )}
 
-        {/* ÉTAPE 2 */}
+        
 
         {step === 2 && (
           <section className="plan-step">
@@ -170,7 +170,7 @@ function CreatePlan() {
           </section>
         )}
 
-        {/* ÉTAPE 3 */}
+       
 
         {step === 3 && (
           <section className="plan-step">
@@ -235,7 +235,7 @@ function CreatePlan() {
           </section>
         )}
 
-        {/* ÉTAPE 4 */}
+        
 
         {step === 4 && (
           <section className="plan-step">

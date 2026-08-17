@@ -34,9 +34,7 @@ function FormRecettes() {
 
           <h2>Ajouter une recette</h2>
 
-          <p>
-            Ajoutez une nouvelle recette à votre bibliothèque Meal Prep.
-          </p>
+          <p>Ajoutez une nouvelle recette à votre bibliothèque Meal Prep.</p>
         </motion.div>
 
         <motion.form
@@ -50,18 +48,12 @@ function FormRecettes() {
         >
           <div className="form-group">
             <label>Nom de la recette</label>
-            <input
-              type="text"
-              placeholder="Ex : Riz au gras"
-            />
+            <input type="text" placeholder="Ex : Riz au gras" />
           </div>
 
           <div className="form-group">
             <label>Image</label>
-            <input
-              type="file"
-              accept="image/*"
-            />
+            <input type="file" accept="image/*" />
           </div>
 
           <div className="form-group">
@@ -89,36 +81,26 @@ function FormRecettes() {
             <div className="form-group">
               <label>Temps de préparation</label>
 
-              <input
-                type="text"
-                placeholder="Ex : 30 min"
-              />
+              <input type="text" placeholder="Ex : 30 min" />
             </div>
 
             <div className="form-group">
               <label>Calories</label>
 
-              <input
-                type="number"
-                placeholder="Ex : 500"
-              />
+              <input type="number" placeholder="Ex : 500" />
             </div>
           </div>
 
           <div className="form-group">
             <label>Ingrédients</label>
 
-            <textarea
-              placeholder="Liste des ingrédients..."
-            ></textarea>
+            <textarea placeholder="Liste des ingrédients..."></textarea>
           </div>
 
           <div className="form-group">
             <label>Étapes de la préparation</label>
 
-            <textarea
-              placeholder="Décrivez les différentes étapes..."
-            ></textarea>
+            <textarea placeholder="Décrivez les différentes étapes..."></textarea>
           </div>
 
           <motion.button

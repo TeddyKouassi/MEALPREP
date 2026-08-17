@@ -14,11 +14,7 @@ function Plats({ image, nom, prix, description }) {
       }}
     >
       <Link to="/Inscription" className="plat-card">
-
-        <motion.div
-          className="plat-image-container"
-          whileHover="hover"
-        >
+        <motion.div className="plat-image-container" whileHover="hover">
           <motion.img
             src={image}
             alt={nom}
@@ -37,23 +33,14 @@ function Plats({ image, nom, prix, description }) {
         </motion.div>
 
         <div className="plat-info-bande">
-
           <div className="plat-ligne-titre">
-            <h3 className="plat-titre">
-              {nom}
-            </h3>
+            <h3 className="plat-titre">{nom}</h3>
 
-            <span className="plat-titre">
-              {prix}
-            </span>
+            <span className="plat-titre">{prix}</span>
           </div>
 
-          <p className="plat-description">
-            {description}
-          </p>
-
+          <p className="plat-description">{description}</p>
         </div>
-
       </Link>
     </motion.div>
   );

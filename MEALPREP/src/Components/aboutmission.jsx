@@ -4,16 +4,16 @@ function AboutMission() {
   const cards = [
     {
       title: "Bien manger",
-      text: "Des repas équilibrés pour une meilleure santé."
+      text: "Des repas équilibrés pour une meilleure santé.",
     },
     {
       title: "Gagner du temps",
-      text: "Planifiez vos repas rapidement et efficacement."
+      text: "Planifiez vos repas rapidement et efficacement.",
     },
     {
       title: "Économiser",
-      text: "Optimisez vos dépenses grâce à une meilleure organisation."
-    }
+      text: "Optimisez vos dépenses grâce à une meilleure organisation.",
+    },
   ];
 
   return (
@@ -23,11 +23,10 @@ function AboutMission() {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.15 }}
       transition={{
-        duration: 0.8
+        duration: 0.8,
       }}
     >
       <div className="apropos-mission-content">
-
         <motion.h2
           initial={{ opacity: 0, y: 25 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -43,40 +42,39 @@ function AboutMission() {
           viewport={{ once: true }}
           transition={{
             duration: 0.6,
-            delay: 0.15
+            delay: 0.15,
           }}
         >
           Chez Meal Prep, notre mission est de rendre l'alimentation saine
-          simple, accessible et adaptée à tous. Nous aidons chaque utilisateur
-          à planifier ses repas selon son budget, son mode de vie et ses
-          objectifs nutritionnels.
+          simple, accessible et adaptée à tous. Nous aidons chaque utilisateur à
+          planifier ses repas selon son budget, son mode de vie et ses objectifs
+          nutritionnels.
         </motion.p>
 
         <div className="apropos-mission-cards">
-
           {cards.map((card, index) => (
             <motion.div
               className="apropos-mission-card"
               key={index}
               initial={{
                 opacity: 0,
-                y: 40
+                y: 40,
               }}
               whileInView={{
                 opacity: 1,
-                y: 0
+                y: 0,
               }}
               viewport={{
                 once: true,
-                amount: 0.2
+                amount: 0.2,
               }}
               transition={{
                 duration: 0.6,
-                delay: index * 0.15
+                delay: index * 0.15,
               }}
               whileHover={{
                 y: -8,
-                scale: 1.02
+                scale: 1.02,
               }}
             >
               <h3>{card.title}</h3>
@@ -84,9 +82,7 @@ function AboutMission() {
               <p>{card.text}</p>
             </motion.div>
           ))}
-
         </div>
-
       </div>
     </motion.section>
   );

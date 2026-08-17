@@ -2,7 +2,6 @@ import { motion } from "framer-motion";
 import RecettesCards from "./RecettesCards";
 
 function RecettesList({ recettes }) {
-
   return (
     <motion.section
       className="recettes-list"
@@ -21,7 +20,6 @@ function RecettesList({ recettes }) {
         },
       }}
     >
-
       {recettes.map((recette) => (
         <motion.div
           key={recette.id}
@@ -44,7 +42,6 @@ function RecettesList({ recettes }) {
           <RecettesCards recette={recette} />
         </motion.div>
       ))}
-
     </motion.section>
   );
 }

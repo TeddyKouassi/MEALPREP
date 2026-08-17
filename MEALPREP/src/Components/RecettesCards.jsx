@@ -25,7 +25,6 @@ function RecettesCards({ recette }) {
         ease: "easeOut",
       }}
     >
-
       <motion.img
         src={recette.image}
         alt={recette.nom}
@@ -38,28 +37,17 @@ function RecettesCards({ recette }) {
       />
 
       <div className="recette-content">
+        <h3>{recette.nom}</h3>
 
-        <h3>
-          {recette.nom}
-        </h3>
-
-        <p>
-          {recette.description}
-        </p>
+        <p>{recette.description}</p>
 
         <div className="recette-info">
-          <span>
-            {recette.calories} kcal
-          </span>
+          <span>{recette.calories} kcal</span>
 
-          <span>
-            {recette.temps} min
-          </span>
+          <span>{recette.temps} min</span>
         </div>
 
-        <span className="recette-objectif">
-          {recette.objectif}
-        </span>
+        <span className="recette-objectif">{recette.objectif}</span>
 
         <motion.button
           whileHover={{
@@ -74,9 +62,7 @@ function RecettesCards({ recette }) {
         >
           Voir la recette
         </motion.button>
-
       </div>
-
     </motion.div>
   );
 }

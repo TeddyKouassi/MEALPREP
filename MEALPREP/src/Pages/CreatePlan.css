@@ -6,9 +6,7 @@
     text-align: center;
 }
 
-/* =========================
-   HEADER
-========================= */
+
 
 .plan-header {
     margin-bottom: 40px;
@@ -36,9 +34,6 @@
     line-height: 1.6;
 }
 
-/* =========================
-   PROGRESSION
-========================= */
 
 .progress {
     display: flex;
@@ -76,9 +71,7 @@
     background: #ddd;
 }
 
-/* =========================
-   ÉTAPE
-========================= */
+
 
 .plan-step {
     padding: 40px 30px;
@@ -106,9 +99,6 @@
     line-height: 1.5;
 }
 
-/* =========================
-   CHOIX
-========================= */
 
 .choices {
     display: grid;
@@ -156,9 +146,6 @@
     color: white;
 }
 
-/* =========================
-   BOUTONS NAVIGATION
-========================= */
 
 .navigation-buttons {
     display: flex;
